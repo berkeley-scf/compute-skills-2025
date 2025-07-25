@@ -1,6 +1,6 @@
 ---
 title: "Berkeley Statistics Computational Skills Workshop"
-subtitle: "UC Berkeley, August 2024"
+subtitle: "UC Berkeley, August 2025"
 listing:
   - id: schedule
     template: assets/schedule.ejs
@@ -19,15 +19,15 @@ Skills related to computation, coding, and reproducibility are crucial for moder
 
 The department will be holding a (new this year) computational skills workshop the week before classes start, focusing on best practices for computation, code development and statistics/data science workflows.
 
-All incoming PhD and MA students are expected to attend the workshop, which will be held August 22-23. Those who already have extensive work or other experience with the topics can request to opt out of the workshop [via this form](https://forms.gle/Mtf2LbSpn6m8JhWc9) (which will be considered by department faculty), as can PhD students who plan to focus exclusively on theory and feel the computing skills/tools covered in the workshop aren't relevant for them.
+All incoming PhD and MA students are expected to attend the workshop, which will be held August 20-21. Those who already have extensive work or other experience with the topics can request to opt out of the workshop [via this form](https://docs.google.com/forms/d/e/1FAIpQLSe2CkIszscnRQlKrICz4ZW3G83J4RPkgIHHhr5YegW-xecAPQ/viewform?usp=dialog) (which will be considered by department faculty), as can PhD students who plan to focus exclusively on theory and feel the computing skills/tools covered in the workshop aren't relevant for them.
 
-In advance, there will also be an optional introduction to computing concepts and to Python for those students (particularly those taking Statistics 243) to be held August 20-21. If you are interested, please [sign up](https://forms.gle/rrFvvqd84ChLTAW8A) for the optional introduction.
+In advance, there will also be an optional introduction to computing concepts and to Python for those students (particularly those taking Statistics 243) to be held August 18-19. If you are interested, please [sign up](https://docs.google.com/forms/d/e/1FAIpQLSe2CkIszscnRQlKrICz4ZW3G83J4RPkgIHHhr5YegW-xecAPQ/viewform?usp=dialog) for the optional introduction.
 
 See the [syllabus/overview](syllabus.html) for more details on workshop content.
 
 ## Logistics (times and locations)
 
-### Optional Sessions (Tuesday/Wednesday)
+### Optional Sessions (Monday/Tuesday)
 
 Location: [334 Evans Hall](https://www.berkeley.edu/map/evans-hall/)
 
@@ -37,16 +37,16 @@ Snacks: Light refreshments during morning and afternoon breaks
 
 Times:
 
- - Tuesday August 20, 8:30 a.m - 4:30 p.m. with a one-hour lunch break.
- - Wednesday August 21, 8:30 a.m - 3:00 p.m. with a one-hour lunch break.
+ - Monday August 18, 9:00 a.m - 5:00 p.m. with a one-hour lunch break.
+ - Tuesday August 21, 9:00 a.m - 3:30 p.m. with a one-hour lunch break.
 
 
-### Core Sessions (Thursday/Friday)
+### Core Sessions (Wednesday/Thursday)
 
-Location: [101 Barker Hall](https://www.berkeley.edu/map/barker-hall/)
+Location: [150 GSPP](https://www.berkeley.edu/map/goldman-school). Enter from the door on Le Roy Avenue and turn left immediately.
 
- - Thursday August 22, 8:30 a.m - 4:30 p.m. with a one-hour lunch break.
- - Friday August 23, 8:30 a.m - 3:00 p.m. with a one-hour lunch break.
+ - Wednesday August 20, 9:00 a.m - 5:00 p.m. with a one-hour lunch break.
+ - Thursday August 21, 9:00 a.m - 3:30 p.m. with a one-hour lunch break.
 
 Lunch: On your own.
 

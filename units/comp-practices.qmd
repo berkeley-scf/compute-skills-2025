@@ -365,13 +365,31 @@ Note that the changes still exist in `file.txt` but they're no longer registered
 Suppose you need to add or modify to your commit. This illustrates a few things you might do to update your commit.
 
 ```bash
-git commit -m 'Initial commit'
+git commit -m 'Some commit'
+
+## 1. Perhaps you forgot to include a new file.
 git add forgotten_file.txt
+
+## 2. Perhaps you forgot to edit an existing file.
 # Edit file.txt.
 git add file.txt
+
+## 3. Perhaps you need to get a version of a file from before.
 # Get version of file from previous commit.
 git checkout <commit_hash> file.txt
+
 git commit --amend
+```
+
+Alternatively suppose you want to undo a commit:
+
+```
+## To go back to the previous commit, but leave the changes in the working directory.
+git reset HEAD~1
+## To go back to a specific commit.
+git reset <commit_hash>
+## To go back to a previous commit and remove any changes in the working directory.
+git reset --hard <commit_hash>
 ```
 
 ## Pushed changes
