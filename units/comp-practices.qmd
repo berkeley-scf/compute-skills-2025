@@ -353,8 +353,11 @@ And here's a more-detailed visualization of how various Git commands relate to y
 ![operations in a repository (Credit: Research Software Engineering with Python, CC License)](git-remote.png "Visualization of operations with and parts of Git")
 
 
+
 ::: {.callout-tip}
 ## Rolling back changes (optional)
+
+Once we have a conceptual understanding, then the commands used to undo or modify changes we've made are easier to understand, though often one has to look up the particular specific commands.
 
 ::: {.panel-tabset}
 

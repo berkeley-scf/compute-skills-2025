@@ -154,6 +154,8 @@ If you have time, explore these two additional options for making comments:
 
 [This article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375) gives tips on how to do good code review (and how to set up projects to facilitate good reviewing.
 
+:::
+
 ## Exercise: Merge the PR
 
 Once you've seen the review by your partner:
