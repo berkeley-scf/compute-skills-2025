@@ -314,7 +314,7 @@ Using your own laptop (optional)
 <p>If you haven’t already used the shell/terminal and Python on your laptop, we recommend you use the DataHub so that we don’t have to troubleshoot problems on multiple laptops.</p>
 <p>If you do use your laptop, you’ll need Python installed, for which we recommend using <a href="https://github.com/conda-forge/miniforge">Miniforge</a>. Another option is the <a href="https://www.anaconda.com/distribution">Anaconda distribution of Python</a>.</p>
 <p>For the shell/terminal parts of this material, you can use the Terminal on your Mac, but not on Windows.</p>
-<p>If you do use your own laptop, you’ll need to <em>clone</em> <a href="https://github.com/berkeley-scf/compute-skills-2024">this GitHub repository</a>. If you don’t know how to do that, just download <a href="https://github.com/berkeley-scf/compute-skills-2024/archive/refs/heads/main.zip">this zip file</a> and unzip it into your home directory on your computer.</p>
+<p>If you do use your own laptop, you’ll need to <em>clone</em> <a href="https://github.com/berkeley-scf/compute-skills-2025">this GitHub repository</a>. If you don’t know how to do that, just download <a href="https://github.com/berkeley-scf/compute-skills-2025/archive/refs/heads/main.zip">this zip file</a> and unzip it into your home directory on your computer.</p>
 </div>
 </div>
 </div>
@@ -412,7 +412,7 @@ Using your own laptop (optional)
 <p>Anytime you are at the UNIX command line, you have a <strong>working directory</strong>, which is your current location in the file system.</p>
 <p>Here’s how you can see where you are using the <code>pwd</code> (“print working directory”) command:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and here’s how you use <code>ls</code> to list the files (and subdirectories) in the working directory…</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">assets</span>       license.qmd  README.md     units           _variables.yml</span>
@@ -423,19 +423,19 @@ Using your own laptop (optional)
 <p>Now let’s go into a subdirectory. We can use <code>cd</code> with the name of the subdirectory. The subdirectory is found ‘relative’ to our working directory, i.e., found from where we currently are.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd units</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024/units</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We could also navigate through nested subdirectories. For example, after going back to our home directory (using <code>cd</code> alone will do this), let’s go to the <code>units</code> subdirectory of the <code>compute-skills-2024</code> subdirectory. The <code>/</code> is a separate character that distinguishes the nested subdirectories.</p>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025/units</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We could also navigate through nested subdirectories. For example, after going back to our home directory (using <code>cd</code> alone will do this), let’s go to the <code>units</code> subdirectory of the <code>compute-skills-2025</code> subdirectory. The <code>/</code> is a separate character that distinguishes the nested subdirectories.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2024/units</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2025/units</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You can access the parent directory of any directory using <code>..</code>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ..</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We can get more complicated in our use of <code>..</code> with relative paths. Here we’ll go up a directory and then down to a different subdirectory.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd units</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ../assets</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024/assets</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025/assets</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And here we’ll go up two directories and then down to another subdirectory (but note that <code>/home/jovyan/tmp</code> may not exist for your server).</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ../../tmp  <span class="co"># Go up two directories and down.</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
@@ -445,9 +445,9 @@ Using your own laptop (optional)
 <h3 class="anchored" data-anchor-id="absolute-versus-relative-paths">Absolute versus relative paths</h3>
 <p>All of the above examples used <strong>relative</strong> paths to navigate based on your working directory at the moment you ran the command.</p>
 <p>We can instead use <strong>absolute</strong> paths so that it doesn’t matter where we are when we run the command. Specifying an absolute path is done by having your path start with <code>/</code>, such as <code>/home/jovyan</code>. If the path doesn’t start with <code>/</code> then it is interpreted as being a relative path, relative to your working directory. Here we’ll go to the <code>units</code> subdirectory again, but this time using an absolute path.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2024/units </span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2025/units </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024/units</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025/units</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -466,8 +466,8 @@ Absolute paths can be dangerous
 <section id="the-filesystem-1" class="level3">
 <h3 class="anchored" data-anchor-id="the-filesystem-1">The filesystem</h3>
 <p>The filesystem is basically a upside-down tree.</p>
-<p>For example, if we just consider the <code>compute-skills-2024</code> directory, we can see the tree structure using <code>tree</code> (not available on DataHub):</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2024</span>
+<p>For example, if we just consider the <code>compute-skills-2025</code> directory, we can see the tree structure using <code>tree</code> (not available on DataHub):</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2025</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Often (as is the case here), that would print out a lot of files and directories, so I’ll just print out the first few lines of the result here. One doesn’t usually use <code>tree</code> that much – our purpose here is to emphasize the hierarchical, nested structure of the filesystem.</p>
 <pre><code>.
@@ -487,7 +487,7 @@ Absolute paths can be dangerous
 │&nbsp;&nbsp; │&nbsp;&nbsp; └── quarto-listing
 │&nbsp;&nbsp; │&nbsp;&nbsp;     ├── list.min.js
 │&nbsp;&nbsp; │&nbsp;&nbsp;     └── quarto-listing.js</code></pre>
-<p>The dot (<code>.</code>) means “this directory”, so the top of the tree here is the <code>compute-skills-2024</code> directory itself, within which there are various subdirectories. Then within each of these are files and further subdirectories.</p>
+<p>The dot (<code>.</code>) means “this directory”, so the top of the tree here is the <code>compute-skills-2025</code> directory itself, within which there are various subdirectories. Then within each of these are files and further subdirectories.</p>
 <p>If we consider the entire filesystem, the top, or root of the tree, is the <code>/</code> directory. Within <code>/</code> there are subdirectories, such as <code>/home</code> (which contains users’ home directories where all of the files owned by a user are stored) and <code>/bin</code> (containing UNIX programs, aka ‘binaries’). We’ll use <code>ls</code> again, this time telling it the directory to operate on:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls /</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bin</span>   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var</span>
@@ -519,7 +519,7 @@ Absolute paths can be dangerous
 <section id="overview-1" class="level3">
 <h3 class="anchored" data-anchor-id="overview-1">Overview</h3>
 <p>Let’s look more at various ways to use commands. We just saw the <code>ls</code> command. Here’s one way we can modify the behavior of the command by passing a command option. Here the <code>-F</code> option (also called a <em>flag</em>) shows directories by appending <code>/</code> to anything that is a directory (rather than a file) and a <code>*</code> to anything that is an executable (i.e., a program).</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2024</span>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2025</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> /usr/bin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Next we’ll use multiple options to the <code>ls</code> command. <code>-l</code> shows extended information about files/directories. <code>-t</code> shows files/directories in order of the time at which they were last modified and <code>-r</code> shows in reverse order. Before I run <code>ls</code>, I’ll create an empty file using the <code>touch</code> command.</p>
@@ -541,7 +541,7 @@ Absolute paths can be dangerous
 <span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 2 jovyan jovyan     4096 Jul 19 15:52  tmp</span>
 <span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 jovyan jovyan        0 Jul 31 14:10  untitled.py</span>
 <span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 jovyan jovyan      617 Jul 31 14:12  Untitled3.ipynb</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 7 jovyan jovyan     4096 Aug  1 15:45  compute-skills-2024</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 7 jovyan jovyan     4096 Aug  1 15:45  compute-skills-2025</span>
 <span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 jovyan jovyan        0 Aug  1 16:03  example.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>While each command has its own syntax, there are some rules usually followed. Generally, executing a command consists of four things:</p>
 <ul>
@@ -586,7 +586,7 @@ Absolute paths can be dangerous
 <p>Anything that follows <code>#</code> is a comment and is ignored.</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="co"># This is ignored</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls  <span class="co"># Everything after the # is ignored</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a> <span class="ex">compute-skills-2024</span>                          test-jh           Untitled2.ipynb</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a> <span class="ex">compute-skills-2025</span>                          test-jh           Untitled2.ipynb</span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">data_c80_regsample_3.dta</span>                     test-private      Untitled3.ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="getting-help-with-unix-commands" class="level3">
@@ -604,7 +604,7 @@ Absolute paths can be dangerous
 <p>Try it with:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> com</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ech</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The first should allow you to get <code>compute-skills-2024</code> and the second <code>echo</code>.</p>
+<p>The first should allow you to get <code>compute-skills-2025</code> and the second <code>echo</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -640,7 +640,7 @@ Tab completion everywhere
 <section id="copying-and-removing-files" class="level3">
 <h3 class="anchored" data-anchor-id="copying-and-removing-files">Copying and removing files</h3>
 <p>You’ll often want to make a copy (<code>cp</code>) of a file, move it (<code>mv</code>) between directories, or remove it (<code>rm</code>).</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/compute-skills-2024/units</span>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/compute-skills-2025/units</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cp calc.py calc-new.py</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv calc-new.py /tmp/.</span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /tmp</span>
@@ -745,7 +745,7 @@ DataHub memory limits
 <p>Be careful about increasing <code>n</code> in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don’t increase <code>n</code> below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. If you’re doing this as part of the workshop, we’ve increased those limits somewhat, so somewhat larger values of <code>n</code> should be fine.</p>
 </div>
 </div>
-<div id="c8d9e4e3" class="cell" data-execution_count="1">
+<div id="a74c01d9" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -767,10 +767,10 @@ DataHub memory limits
 </div>
 <div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We might need to run it in a loop to be able to monitor the running process (since it finishes so quickly):</p>
-<div id="fb303c45" class="cell" data-execution_count="2">
+<div id="3284896a" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ((i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span>i<span class="op">++</span>))<span class="op">;</span> do</span>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ((i<span class="op">=</span><span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span> i<span class="op">++</span>))<span class="op">;</span> do</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  python calc.py</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1387,7 +1387,7 @@ DataHub memory limits
 <span id="cb39-141"><a href="#cb39-141" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-142"><a href="#cb39-142" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb39-143"><a href="#cb39-143" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb39-144"><a href="#cb39-144" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024</span></span>
+<span id="cb39-144"><a href="#cb39-144" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025</span></span>
 <span id="cb39-145"><a href="#cb39-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-146"><a href="#cb39-146" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-147"><a href="#cb39-147" aria-hidden="true" tabindex="-1"></a></span>
@@ -1410,14 +1410,14 @@ DataHub memory limits
 <span id="cb39-164"><a href="#cb39-164" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb39-165"><a href="#cb39-165" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd units</span>
 <span id="cb39-166"><a href="#cb39-166" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024/units</span></span>
+<span id="cb39-167"><a href="#cb39-167" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025/units</span></span>
 <span id="cb39-168"><a href="#cb39-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-169"><a href="#cb39-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-170"><a href="#cb39-170" aria-hidden="true" tabindex="-1"></a>We could also navigate through nested subdirectories. For example, after going back to our home directory (using <span class="in">`cd`</span> alone will do this), let's go to the <span class="in">`units`</span> subdirectory of the <span class="in">`compute-skills-2024`</span> subdirectory. The <span class="in">`/`</span> is a separate character that distinguishes the nested subdirectories.</span>
+<span id="cb39-170"><a href="#cb39-170" aria-hidden="true" tabindex="-1"></a>We could also navigate through nested subdirectories. For example, after going back to our home directory (using <span class="in">`cd`</span> alone will do this), let's go to the <span class="in">`units`</span> subdirectory of the <span class="in">`compute-skills-2025`</span> subdirectory. The <span class="in">`/`</span> is a separate character that distinguishes the nested subdirectories.</span>
 <span id="cb39-171"><a href="#cb39-171" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-172"><a href="#cb39-172" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb39-173"><a href="#cb39-173" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd</span>
-<span id="cb39-174"><a href="#cb39-174" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2024/units</span>
+<span id="cb39-174"><a href="#cb39-174" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2025/units</span>
 <span id="cb39-175"><a href="#cb39-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-176"><a href="#cb39-176" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-177"><a href="#cb39-177" aria-hidden="true" tabindex="-1"></a>You can access the parent directory of any directory using <span class="in">`..`</span>:</span>
@@ -1425,7 +1425,7 @@ DataHub memory limits
 <span id="cb39-179"><a href="#cb39-179" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb39-180"><a href="#cb39-180" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ..</span>
 <span id="cb39-181"><a href="#cb39-181" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb39-182"><a href="#cb39-182" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024</span></span>
+<span id="cb39-182"><a href="#cb39-182" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025</span></span>
 <span id="cb39-183"><a href="#cb39-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-184"><a href="#cb39-184" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-185"><a href="#cb39-185" aria-hidden="true" tabindex="-1"></a>We can get more complicated in our use of <span class="in">`..`</span> with relative paths. Here we'll go up a directory and then down to a different subdirectory.</span>
@@ -1434,7 +1434,7 @@ DataHub memory limits
 <span id="cb39-188"><a href="#cb39-188" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd units</span>
 <span id="cb39-189"><a href="#cb39-189" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ../assets</span>
 <span id="cb39-190"><a href="#cb39-190" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb39-191"><a href="#cb39-191" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024/assets</span></span>
+<span id="cb39-191"><a href="#cb39-191" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025/assets</span></span>
 <span id="cb39-192"><a href="#cb39-192" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-193"><a href="#cb39-193" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-194"><a href="#cb39-194" aria-hidden="true" tabindex="-1"></a>And here we'll go up two directories and then down to another subdirectory (but note that <span class="in">`/home/jovyan/tmp`</span> may not exist for your server).</span>
@@ -1452,9 +1452,9 @@ DataHub memory limits
 <span id="cb39-206"><a href="#cb39-206" aria-hidden="true" tabindex="-1"></a>We can instead use **absolute** paths so that it doesn't matter where we are when we run the command. Specifying an absolute path is done by having your path start with <span class="in">`/`</span>, such as <span class="in">`/home/jovyan`</span>. If the path doesn't start with <span class="in">`/`</span> then it is interpreted as being a relative path, relative to your working directory. Here we'll go to the <span class="in">`units`</span> subdirectory again, but this time using an absolute path. </span>
 <span id="cb39-207"><a href="#cb39-207" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-208"><a href="#cb39-208" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb39-209"><a href="#cb39-209" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2024/units </span>
+<span id="cb39-209"><a href="#cb39-209" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2025/units </span>
 <span id="cb39-210"><a href="#cb39-210" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span>
-<span id="cb39-211"><a href="#cb39-211" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2024/units</span></span>
+<span id="cb39-211"><a href="#cb39-211" aria-hidden="true" tabindex="-1"></a><span class="ex">/home/jovyan/compute-skills-2025/units</span></span>
 <span id="cb39-212"><a href="#cb39-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-213"><a href="#cb39-213" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-214"><a href="#cb39-214" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
@@ -1470,10 +1470,10 @@ DataHub memory limits
 <span id="cb39-224"><a href="#cb39-224" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-225"><a href="#cb39-225" aria-hidden="true" tabindex="-1"></a>The filesystem is basically a upside-down tree.</span>
 <span id="cb39-226"><a href="#cb39-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-227"><a href="#cb39-227" aria-hidden="true" tabindex="-1"></a>For example, if we just consider the <span class="in">`compute-skills-2024`</span> directory, we can see the tree structure using <span class="in">`tree`</span> (not available on DataHub):</span>
+<span id="cb39-227"><a href="#cb39-227" aria-hidden="true" tabindex="-1"></a>For example, if we just consider the <span class="in">`compute-skills-2025`</span> directory, we can see the tree structure using <span class="in">`tree`</span> (not available on DataHub):</span>
 <span id="cb39-228"><a href="#cb39-228" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-229"><a href="#cb39-229" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb39-230"><a href="#cb39-230" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2024</span>
+<span id="cb39-230"><a href="#cb39-230" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /home/jovyan/compute-skills-2025</span>
 <span id="cb39-231"><a href="#cb39-231" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> tree</span>
 <span id="cb39-232"><a href="#cb39-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-233"><a href="#cb39-233" aria-hidden="true" tabindex="-1"></a></span>
@@ -1499,7 +1499,7 @@ DataHub memory limits
 <span id="cb39-253"><a href="#cb39-253" aria-hidden="true" tabindex="-1"></a><span class="in">│&nbsp;&nbsp; │&nbsp;&nbsp;     └── quarto-listing.js</span></span>
 <span id="cb39-254"><a href="#cb39-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-255"><a href="#cb39-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-256"><a href="#cb39-256" aria-hidden="true" tabindex="-1"></a>The dot (<span class="in">`.`</span>) means "this directory", so the top of the tree here is the <span class="in">`compute-skills-2024`</span> directory itself, within which there are various subdirectories. Then within each of these are files and further subdirectories.</span>
+<span id="cb39-256"><a href="#cb39-256" aria-hidden="true" tabindex="-1"></a>The dot (<span class="in">`.`</span>) means "this directory", so the top of the tree here is the <span class="in">`compute-skills-2025`</span> directory itself, within which there are various subdirectories. Then within each of these are files and further subdirectories.</span>
 <span id="cb39-257"><a href="#cb39-257" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-258"><a href="#cb39-258" aria-hidden="true" tabindex="-1"></a>If we consider the entire filesystem, the top, or root of the tree, is the <span class="in">`/`</span> directory. Within <span class="in">`/`</span> there are subdirectories, such as <span class="in">`/home`</span> (which contains users' home directories where all of the files owned by a user are stored) and <span class="in">`/bin`</span> (containing UNIX programs, aka 'binaries'). We'll use <span class="in">`ls`</span> again, this time telling it the directory to operate on:</span>
 <span id="cb39-259"><a href="#cb39-259" aria-hidden="true" tabindex="-1"></a></span>
@@ -1562,7 +1562,7 @@ DataHub memory limits
 <span id="cb39-316"><a href="#cb39-316" aria-hidden="true" tabindex="-1"></a>Let's look more at various ways to use commands. We just saw the <span class="in">`ls`</span> command. Here's one way we can modify the behavior of the command by passing a command option. Here the <span class="in">`-F`</span> option (also called a *flag*) shows directories by appending `/` to anything that is a directory (rather than a file) and a `*` to anything that is an executable (i.e., a program).</span>
 <span id="cb39-317"><a href="#cb39-317" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-318"><a href="#cb39-318" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb39-319"><a href="#cb39-319" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2024</span>
+<span id="cb39-319"><a href="#cb39-319" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd compute-skills-2025</span>
 <span id="cb39-320"><a href="#cb39-320" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span>
 <span id="cb39-321"><a href="#cb39-321" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span> /usr/bin</span>
 <span id="cb39-322"><a href="#cb39-322" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1589,7 +1589,7 @@ DataHub memory limits
 <span id="cb39-343"><a href="#cb39-343" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 2 jovyan jovyan     4096 Jul 19 15:52  tmp</span>
 <span id="cb39-344"><a href="#cb39-344" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 jovyan jovyan        0 Jul 31 14:10  untitled.py</span>
 <span id="cb39-345"><a href="#cb39-345" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 jovyan jovyan      617 Jul 31 14:12  Untitled3.ipynb</span>
-<span id="cb39-346"><a href="#cb39-346" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 7 jovyan jovyan     4096 Aug  1 15:45  compute-skills-2024</span>
+<span id="cb39-346"><a href="#cb39-346" aria-hidden="true" tabindex="-1"></a><span class="ex">drwxr-xr-x</span> 7 jovyan jovyan     4096 Aug  1 15:45  compute-skills-2025</span>
 <span id="cb39-347"><a href="#cb39-347" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span> 1 jovyan jovyan        0 Aug  1 16:03  example.txt</span>
 <span id="cb39-348"><a href="#cb39-348" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-349"><a href="#cb39-349" aria-hidden="true" tabindex="-1"></a></span>
@@ -1674,7 +1674,7 @@ DataHub memory limits
 <span id="cb39-428"><a href="#cb39-428" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb39-429"><a href="#cb39-429" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="co"># This is ignored</span></span>
 <span id="cb39-430"><a href="#cb39-430" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls  <span class="co"># Everything after the # is ignored</span></span>
-<span id="cb39-431"><a href="#cb39-431" aria-hidden="true" tabindex="-1"></a> <span class="ex">compute-skills-2024</span>                          test-jh           Untitled2.ipynb</span>
+<span id="cb39-431"><a href="#cb39-431" aria-hidden="true" tabindex="-1"></a> <span class="ex">compute-skills-2025</span>                          test-jh           Untitled2.ipynb</span>
 <span id="cb39-432"><a href="#cb39-432" aria-hidden="true" tabindex="-1"></a> <span class="ex">data_c80_regsample_3.dta</span>                     test-private      Untitled3.ipynb</span>
 <span id="cb39-433"><a href="#cb39-433" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-434"><a href="#cb39-434" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1709,7 +1709,7 @@ DataHub memory limits
 <span id="cb39-463"><a href="#cb39-463" aria-hidden="true" tabindex="-1"></a><span class="ex">ech</span></span>
 <span id="cb39-464"><a href="#cb39-464" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb39-465"><a href="#cb39-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-466"><a href="#cb39-466" aria-hidden="true" tabindex="-1"></a>The first should allow you to get <span class="in">`compute-skills-2024`</span> and the second <span class="in">`echo`</span>.</span>
+<span id="cb39-466"><a href="#cb39-466" aria-hidden="true" tabindex="-1"></a>The first should allow you to get <span class="in">`compute-skills-2025`</span> and the second <span class="in">`echo`</span>.</span>
 <span id="cb39-467"><a href="#cb39-467" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-468"><a href="#cb39-468" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
 <span id="cb39-469"><a href="#cb39-469" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tab completion everywhere</span></span>
@@ -1743,7 +1743,7 @@ DataHub memory limits
 <span id="cb39-497"><a href="#cb39-497" aria-hidden="true" tabindex="-1"></a>You'll often want to make a copy (<span class="in">`cp`</span>) of a file, move it (<span class="in">`mv`</span>) between directories, or remove it (<span class="in">`rm`</span>). </span>
 <span id="cb39-498"><a href="#cb39-498" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-499"><a href="#cb39-499" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb39-500"><a href="#cb39-500" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/compute-skills-2024/units</span>
+<span id="cb39-500"><a href="#cb39-500" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/compute-skills-2025/units</span>
 <span id="cb39-501"><a href="#cb39-501" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cp calc.py calc-new.py</span>
 <span id="cb39-502"><a href="#cb39-502" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv calc-new.py /tmp/.</span>
 <span id="cb39-503"><a href="#cb39-503" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /tmp</span>
@@ -1850,7 +1850,7 @@ DataHub memory limits
 <span id="cb39-606"><a href="#cb39-606" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-609"><a href="#cb39-609" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb39-610"><a href="#cb39-610" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb39-611"><a href="#cb39-611" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ((i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span>i<span class="op">++</span>))<span class="op">;</span> do</span>
+<span id="cb39-611"><a href="#cb39-611" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ((i<span class="op">=</span><span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span> i<span class="op">++</span>))<span class="op">;</span> do</span>
 <span id="cb39-612"><a href="#cb39-612" aria-hidden="true" tabindex="-1"></a>  python calc.py</span>
 <span id="cb39-613"><a href="#cb39-613" aria-hidden="true" tabindex="-1"></a>done</span>
 <span id="cb39-614"><a href="#cb39-614" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
