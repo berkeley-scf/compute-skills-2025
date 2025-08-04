@@ -244,7 +244,9 @@ have made multiple ("atomic") commits.
 
 ## Exercise: Put your code in your repository
 
-Add your new code to your repository. Then commit it. You could push it to  GitHub if you want, but that will be part of a later exercise at the end of Section 3, so we'll troubleshoot problems with pushing then.
+Add your new code to your repository. Then commit it, providing a meaningful commit message.
+
+You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we'll troubleshoot any problems with pushing then.
 
 
 # 3. Understanding Git
@@ -281,7 +283,7 @@ Each commit has:
  - hashes of the files in the repository in their current state, and
  - the changes (based on the `diff` tool) relative to the parent commit.
 
-![A Git commit (Credit: ProGit book, CC License)](commit.png)
+![Figure: A Git commit (Credit: ProGit book, CC License)](commit.png "visualization of a git commit")
 
 We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash include information of the parent node, since this allow us to keep the check the structural consistency of the DAG.
 
@@ -314,13 +316,13 @@ print('Hash:', hash2)
 
 A *repository* is the set of files for a project with their history. It's a collection of commits in the form of an directed acyclic graph.
 
-![A (simple) Git repository (Credit: ProGit book, CC License)](tree.png)
+![Figure: A (simple) Git repository (Credit: ProGit book, CC License)](tree.png "visualization of a git repository (directed acyclic graph of commits)")
 
 Some other terms:
 
-- HEAD: a pointer to the current commit
-- tag: a label for a commit
-- branch: a commit - often indicating a commit that has "branched" off of some main workflow or some linear sequence of commits
+- *HEAD*: a pointer to the current commit
+- *tag*: a label for a commit
+- *branch*: a commit - often indicating a commit that has "branched" off of some main workflow or some linear sequence of commits
 
 
 
@@ -330,11 +332,11 @@ The index (staging area) keeps track of changes (made to tracked files) that are
 
 Here's a high-level overview of how the staging area relates to the other pieces of what we've been doing.
 
-![local operations in a repository (Credit: ProGit book, CC License)](staging.png "Visualization of local operations in Git")
+![Figure: Local operations in a repository (Credit: ProGit book, CC License)](staging.png "Visualization of local operations in Git")
 
 And here's a more-detailed visualization of how various Git commands relate to your current directory, the staging area and the repository.
 
-![operations in a repository (Credit: Research Software Engineering with Python, CC License)](git-remote.png "Visualization of operations with and parts of Git")
+![Figure: detailed operations in a repository (Credit: Research Software Engineering with Python, CC License)](git-remote.png "Visualization of operations with and parts of Git")
 
 
 
