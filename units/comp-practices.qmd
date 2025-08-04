@@ -383,7 +383,7 @@ git commit --amend
 
 Alternatively suppose you want to undo a commit:
 
-```
+```bash
 ## To go back to the previous commit, but leave the changes in the working directory.
 git reset HEAD~1
 ## To go back to a specific commit.
