@@ -21,6 +21,17 @@ This module introduces you to Python, making heavy use of [this Software Carpent
 
 {{< include point-to-prep.qmd >}}
 
+::: {.callout-warning title="Using AI assistance"}
+
+I think it's fair to say that most of us are still trying to understand how best to learn with the help of AI, without fooling ourselves into using AI without really learning/understanding.
+
+You're welcome to use an AI assistant (e.g., you can use GitHub Copilot for free with the GitHub Education program), but I strongly suggest you use it to assistand critique code you start to write on your own or ask it for tips rather than having it generate full code for you.
+
+If you just have it generate code, you are unlikely to remember the syntax and ideas later, unlikely to understand well enough to debug/troubleshoot in the future, and likely to introduce errors from AI hallucinations.
+
+When you do have AI generate code, particularly when learning or for important code, make sure you understand and critique the result completely.
+
+:::
 
 # Ways of running Python
 
@@ -70,7 +81,7 @@ One can also run Python or (IPython for some enhanced capabilities, including ea
 Finally running Python within *VS Code* or an IDE such as *PyCharm* is also common.
 :::
 
-For various reasons, for most of the demos, I will run code in an IPython session in the terminal.
+For various reasons, for most of the demos, I will run code in an IPython session in the terminal (or perhaps sometimes in VS Code).
 
 # Basic use of Python
 

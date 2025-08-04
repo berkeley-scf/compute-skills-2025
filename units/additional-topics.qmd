@@ -47,6 +47,8 @@ We'll demo the use of branching and PRs by fixing our `optimize` function.
 
 First, let's fix the error in our function in a new branch.
 
+We'll first (create and) switch to the new branch:
+
 ```bash
 git switch -c fix_initial_bugs
 ```
@@ -57,10 +59,12 @@ Push the branch with the fix to GitHub.
 
 ```bash
 git add newton.py
+
 git commit -m'Fix initial bugs:
 - derivative interval too small
 - stopping criterion logic incorrect
 - copy-paste duplication'
+
 git push -u origin fix_initial_bugs
 ```
 
@@ -250,7 +254,7 @@ Numbers in most languages are stored by default as double precision floating poi
 - 8 bytes = 64 bits = double precision
 - 4 bytes = 32 bits = single precision
 
-(GPU libraries often use 4 bytes or even fewer.)
+(GPU libraries often use 4 bytes or even fewer, or a mix of precisions.)
 
 
 ```{python}
@@ -414,7 +418,7 @@ Here are the detailed steps of how to do all that:
 2. On DataHub, clone the forked repository: `git clone https://github.com/<your_username>/newton-practice-<partner_name>`.
 3. On DataHub, enter the directory of the cloned repository: `cd newton-practice-<partner_name>`.
 4. Make a branch, make changes, add, and commit.
-5. Give DataHub access to the new repository via [Step 3 of the steps for accessing GitHub repository from DataHub](https://berkeley-scf.github.io/compute-skills-2024/prep.html#give-access-to-the-specific-github-repository-you-are-working-with).
+5. Give DataHub access to the new repository via [Step 3 of the steps for accessing GitHub repository from DataHub](https://berkeley-scf.github.io/compute-skills-2025/prep.html#give-access-to-the-specific-github-repository-you-are-working-with).
 6. Push the commit to your GitHub: `git push -u origin newton-practice-<partner_name>`.
 7. Go to `https://github.com/<your_username>/newton-practice-<partner_name>` and open a pull request ("Compare and pull request"). The request will automatically be done in the GitHub account of your partner.
 
@@ -570,8 +574,10 @@ Conda environments provide an additional layer of modularity/reproducibility, al
 
 ```bash
 type python
+
 conda create -n my_iso_env python=3.11
 source activate my_iso_env
+
 type python
 conda install numpy
 ```
@@ -726,8 +732,8 @@ To set up GitHub Pages for a repository, go to `https://github.com/github_org/re
 
 In fact the website for this workshop was done using Quarto, which uses GitHub Pages and GitHub Actions behind the scenes.
 
-Chris runs `quarto publish gh-pages` to update the site. Quarto will (on the local machine) render the html (convert the Markdown to html) and then behind the scenes Quarto uses [GitHub Actions](https://github.com/berkeley-scf/compute-skills-2024/actions) and [GitHub Pages (via the `gh-pages branch)](https://github.com/berkeley-scf/compute-skills-2024/tree/gh-pages) to publish the website.
+Chris runs `quarto publish gh-pages` to update the site. Quarto will (on the local machine) render the html (convert the Markdown to html) and then behind the scenes Quarto uses [GitHub Actions](https://github.com/berkeley-scf/compute-skills-2025/actions) and [GitHub Pages (via the `gh-pages branch)](https://github.com/berkeley-scf/compute-skills-2025/tree/gh-pages) to publish the website.
 
 # Feedback survey
 
-This is the first time we've done this, so it's particularly valuable now to get feedback on it. Please fill out this [brief survey](https://forms.gle/7oy1y4EXrcGnH5to9). 
+This is only the second time we've done this, so it's helpful now to get feedback on it. Please fill out this [brief survey](https://docs.google.com/forms/d/e/1FAIpQLScXrPcjThkfguJ56zbtU_VB8aZ1K5fWBeLaY4GDZNnEve1JJQ/viewform?usp=dialog).

@@ -19,6 +19,17 @@ execute:
 This module presents the core content of the workshop on version control (using Git), code style, documentation, and testing.
 :::
 
+::: {.callout-warning title="Using AI assistance"}
+
+I think it's fair to say that most of us are still trying to understand how best to learn with the help of AI, without fooling ourselves that we are "learning" and "understanding".
+
+You're welcome to use an AI assistant (e.g., you can use GitHub Copilot for free with the GitHub Education program), but I strongly suggest you use it to assistand critique code you start to write on your own or ask it for tips rather than having it generate full code for you.
+
+If you just have it generate code, you are unlikely to remember the syntax and ideas later, unlikely to understand well enough to debug/troubleshoot in the future, and likely to introduce errors from AI hallucinations.
+
+When you do have AI generate code, particularly when learning or for important code, make sure you understand and critique the result completely.
+
+:::
 
 
 # 1. Our running example: Newton's method for optimization
@@ -128,8 +139,9 @@ In the terminal, let's make a small change to the README, register the change wi
 First make a local copy of the repository from the remote on GitHub. It's best do this **outside** of the `compute-skills-2025` directory; otherwise you'll have a repository nested within a repository. 
 
 ```bash
-## First `cd` to your home directory to
-## avoid cloning into the `compute-skills-2025` repository.
+## First `cd` to your home directory to avoid cloning a repo within a repo.
+cd
+
 git clone https://github.com/<your_username>/newton-practice
 ```
 
@@ -166,7 +178,8 @@ Next move (or copy) your Python module into the repository directory. For the de
 ```bash
 cd ~/newton-practice
 cp ../compute-skills-2025/units/newton-buggy.py newton.py
-## Tell git to track the file
+
+## Tell git to track the file (put it in the staging area).
 git add newton.py
 ```
 
@@ -358,8 +371,11 @@ If I make some changes to a file that I decide are a mistake, before `git add` (
 But I can also go back to the version stored by Git.
 
 ```bash
-# git checkout -- file.txt  # This is older syntax.
+# Current, recommended syntax:
 git restore file.txt
+
+# Alternative (older) syntax:
+# git checkout -- file.txt  
 ```
 
 ## Staged, uncommitted changes
@@ -370,8 +386,13 @@ of the staging area like this:
 
 ```bash
 git status
-# git reset HEAD file.txt  # This is older syntax.
+
+# Current, recommended syntax:
 git restore --staged file.txt
+
+# Alternative (older) syntax:
+# git reset HEAD file.txt  # This is older syntax.
+
 git status
 ```
 
