@@ -133,12 +133,12 @@ Don't (yet) merge in the PR. We want someone else to review it to have additiona
 
 ## Exercise: Code review
 
-Now find a partner.
+Now find a partner. 
 
 Give the partner the URL for your repository on GitHub and ask them to look at the PR.
 In turn get the URL for their repository.
 
-In reviewing the PR, make comments in the PR comment/conversation area on GitHub. 
+In reviewing the PR, make comments in the PR comment/conversation area on GitHub.
 
 If you have time, explore these two additional options for making comments:
 
@@ -149,6 +149,10 @@ If you have time, explore these two additional options for making comments:
    - Click on the `Files changed` tab (or go to `https://github.com/<USERNAME>/newton-practice/pull/<PULL_ID>/files` for the specific "PULL_ID").
    - Hover over a specific line in a specific file with your mouse. A blue "plus" box should appear. Click on the plus to add a comment.
    - Click on `Add single comment` or optionally experiment with `Start a review`.
+
+::: {.callout-tip title="Code review guidelines"}
+
+[This article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012375) gives tips on how to do good code review (and how to set up projects to facilitate good reviewing.
 
 ## Exercise: Merge the PR
 

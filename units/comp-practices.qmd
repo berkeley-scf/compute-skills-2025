@@ -344,7 +344,14 @@ Some other terms:
 
 The index (staging area) keeps track of changes (made to tracked files) that are added, but that are not yet committed.
 
+Here's a high-level overview of how the staging area relates to the other pieces of what we've been doing.
+
 ![local operations in a repository (Credit: ProGit book, CC License)](staging.png "Visualization of local operations in Git")
+
+And here's a more-detailed visualization of how various Git commands relate to your current directory, the staging area and the repository.
+
+![operations in a repository (Credit: Research Software Engineering with Python, CC License)](git-remote.png "Visualization of operations with and parts of Git")
+
 
 ::: {.callout-tip}
 ## Rolling back changes (optional)
@@ -353,7 +360,7 @@ The index (staging area) keeps track of changes (made to tracked files) that are
 
 ## Uncommitted changes
 
-If I make some changes to a file that I decide are a mistaken, before `git add` (i.e., before registering/staging the changes with `git`), I can always still edit the file to undo the mistakes.
+If I make some changes to a file that I decide are a mistake, before `git add` (i.e., before registering/staging the changes with `git`), I can always still edit the file to undo the mistakes.
 
 But I can also go back to the version stored by Git.
 
