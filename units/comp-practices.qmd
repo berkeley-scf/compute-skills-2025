@@ -187,7 +187,9 @@ of Newton's method.
 Here are some options for opening an Editor to edit your code/markdown/text files.
 
  - In DataHub, you can double-click on the file in the file manager to open an Editor window.
- - If you go to your repository on GitHub, and click into a file and then press "." (the period key), GitHub will put you into a VS Code-based editor window.
+ - If you go to your repository on GitHub, and click into a file, you can either:
+   - Click on the Pencil/Edit icon to edit the file, or
+   - Press "." (the period key), and GitHub will put you into a VS Code-based editor window.
 - From the terminal in the DataHub, you can start an editor such as vim or emacs or nano by typing the name of the editor and (optionally) the name of the file you want to edit, e.g., `emacs README.md`).
 - You can start VS Code from within DataHub via `File -> New Launcher` and then selecting the VS Code icon. 
 - You can download and upload files to your laptop. This might be more comfortable for you for large edits, but it can be inconvenient for minor changes.
@@ -219,6 +221,8 @@ Instead of having to `add` files that already part of the repository (such as `R
 git commit -a -m"Update README."
 ```
 We do need to explicitly add any **new** files (e.g., `newton.py`) that are not yet registered with git via `git add`.
+
+Caution: relying heavily on `-a` can result in commits that combine a bunch of unrelated changes (and possibly changes you didn't want to commit). Omitting `-a` and using `git add` for each changed file gives you more control and is safer.
 :::
 
 ::: {.callout-note}
@@ -433,7 +437,9 @@ This will remove the previous commit at the remote (GitHub in our case).
 
 ## Exercise: code review
 
-#### Step 0: Push your changes to GitHub so they're easily available to your partner.
+#### Step 0: Push your changes to GitHub
+
+This will make them easily available to your partner and mimics the process we want/need to use anyway when interacting with remote collaborators or working asynchronously. Do your collaboration on GitHub, which is designed to help with collaboration, and not via email/text/etc.
 
 ```bash
 git push
