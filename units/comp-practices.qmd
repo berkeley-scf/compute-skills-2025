@@ -244,24 +244,8 @@ have made multiple ("atomic") commits.
 
 ## Exercise: Put your code in your repository
 
-Add your new code to your repository. Then commit and push to GitHub.
+Add your new code to your repository. Then commit it. You could push it to  GitHub if you want, but that will be part of a later exercise at the end of Section 3, so we'll troubleshoot problems with pushing then.
 
-## Exercise: code review
-
-#### Step 1: Make suggestions
-
-Go to your partner's repository at `https://github.com/<user_name>/newton-practice`.
-
-1. Look over their code.
-2. Make some comments/suggestions in a new GitHub issue (go to the `Issues` button and click on `New issue`).
-
-#### Step 2: Respond to suggestions
-
-In response to your partner's comments, make some small change(s) to your `newton.py` code.
-
-You can do this in DataHub (or locally on your laptop if that's what you're doing) and make a commit as we did in the previous exercise.
-
-Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the `+` button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run `git pull` to pull down the changes to your local repository on DataHub or your laptop.
 
 # 3. Understanding Git
 
@@ -445,6 +429,28 @@ This will remove the previous commit at the remote (GitHub in our case).
 :::
 
 
+## Exercise: code review
+
+#### Step 0: Push your changes to GitHub so they're easily available to your partner.
+
+```bash
+git push
+```
+
+#### Step 1: Make suggestions
+
+Go to your partner's repository at `https://github.com/<user_name>/newton-practice`.
+
+1. Look over their code.
+2. Make some comments/suggestions in a new GitHub issue (go to the `Issues` button and click on `New issue`).
+
+#### Step 2: Respond to suggestions
+
+In response to your partner's comments, make some small change(s) to your `newton.py` code.
+
+You can do this in DataHub (or locally on your laptop if that's what you're doing) and make a commit as we did in the previous exercise.
+
+Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the `+` button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run `git pull` to pull down the changes to your local repository on DataHub or your laptop.
 
 # 4. Code style and documentation
 
