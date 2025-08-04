@@ -56,7 +56,9 @@ Snacks: Light refreshments during morning and afternoon breaks
 
 - If you don't already have a GitHub account, please [sign up for an account](http://github.com/signup).
 - Bring your laptop as the workshop will focus on hands-on work.
-- We'll be using the campus DataHub as our [primary computational environment](prep.html), so you don't need to install anything on your laptop, though you can install Git and Python if you wish.
+- (Optional/special case) We'll be using the campus DataHub as our [primary computational environment](prep.html), so you don't need to install anything on your laptop, though you can install Git and Python on your laptop if you wish.
+- (Completely optional) Last year, a few participants mentioned they would have liked to think about the coding problem in advance before Wednesday's [Computational Tools and Practices module](https://computing.stat.berkeley.edu/compute-skills-2025/units/comp-practices.html). If you think you'd like to do that, simply take a look at the [first section of the module](https://computing.stat.berkeley.edu/compute-skills-2025/units/comp-practices.html#our-running-example-newtons-method-for-optimization) and consider writing Python code to implement Newton's method.
+
 
 
 ## Schedule

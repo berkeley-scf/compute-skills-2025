@@ -29,7 +29,7 @@ We'll use a running example, Newton's method for optimization, during this works
 
 Recall that Newton's method works as follows to optimize some objective function, $f(x)$, as a function of univariate or multivariate $x$, where $f(x)$ is univariate. 
 
-Newton's method is iterative. If we are at step $t-1$, the next value (when minimizing a function) is:
+Newton's method is iterative. If we are at step $t-1$, the next value (when minimizing a function of univariate $x$) is:
 
 $$
 x_t = x_{t-1} - f^{\prime}(x_{t-1}) / f^{\prime\prime}(x_{t-1})
@@ -125,10 +125,11 @@ In the terminal, let's make a small change to the README, register the change wi
 
 #### Step 1. Clone the repository
 
-First make a local copy of the repository from the remote on GitHub. It's best do this **outside** of the `compute-skills-2024` directory; otherwise you'll have a repository nested within a repository. 
+First make a local copy of the repository from the remote on GitHub. It's best do this **outside** of the `compute-skills-2025` directory; otherwise you'll have a repository nested within a repository. 
 
 ```bash
-cd  # Avoid cloning into the `compute-skills-2024` repository.
+## First `cd` to your home directory to
+## avoid cloning into the `compute-skills-2025` repository.
 git clone https://github.com/<your_username>/newton-practice
 ```
 
@@ -164,18 +165,34 @@ Next move (or copy) your Python module into the repository directory. For the de
 
 ```bash
 cd ~/newton-practice
-cp ../compute-skills-2024/units/newton-buggy.py newton.py
+cp ../compute-skills-2025/units/newton-buggy.py newton.py
 ## Tell git to track the file
 git add newton.py
 ```
 
-The key thing is to copy the code file into the directory of the new repository. 
+The key thing is to make sure that you copy the code file into the directory of the new repository.
+
+You can do this with `cp` in the shell as I did above.
+
+If you're learning to use the shell, it's best to practice doing the copying in the shell, but if you really need to, you may be able to drag and move it within the DataHub file manager window pane.
+
+Of if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the "Upload Files" button. 
 
 Step 3. Edit file(s)
 
 Edit the README file to indicate that the repository has a basic implementation
-of Newton's method. (In DataHub, you can double-click on the README in the file manager
-pane.)
+of Newton's method.
+
+::: {.callout-tip title="Editing files"}
+Here are some options for opening an Editor to edit your code/markdown/text files.
+
+ - In DataHub, you can double-click on the file in the file manager to open an Editor window.
+ - If you go to your repository on GitHub, and click into a file and then press "." (the period key), GitHub will put you into a VS Code-based editor window.
+- From the terminal in the DataHub, you can start an editor such as vim or emacs or nano by typing the name of the editor and (optionally) the name of the file you want to edit, e.g., `emacs README.md`).
+- You can start VS Code from within DataHub via `File -> New Launcher` and then selecting the VS Code icon. 
+- You can download and upload files to your laptop. This might be more comfortable for you for large edits, but it can be inconvenient for minor changes.
+
+:::
 
 ```bash
 git status
