@@ -19,18 +19,7 @@ execute:
 This module presents the core content of the workshop on version control (using Git), code style, documentation, and testing.
 :::
 
-::: {.callout-warning title="Using AI assistance"}
-
-I think it's fair to say that most of us are still trying to understand how best to learn with the help of AI, without fooling ourselves that we are "learning" and "understanding".
-
-You're welcome to use an AI assistant (e.g., you can use GitHub Copilot for free with the GitHub Education program), but I strongly suggest you use it to assistand critique code you start to write on your own or ask it for tips rather than having it generate full code for you.
-
-If you just have it generate code, you are unlikely to remember the syntax and ideas later, unlikely to understand well enough to debug/troubleshoot in the future, and likely to introduce errors from AI hallucinations.
-
-When you do have AI generate code, particularly when learning or for important code, make sure you understand and critique the result completely.
-
-:::
-
+{{< include ai.qmd >}}
 
 # 1. Our running example: Newton's method for optimization
 
