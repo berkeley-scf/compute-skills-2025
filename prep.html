@@ -338,8 +338,9 @@ Accessing GitHub from your laptop rather than DataHub
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you’re on your laptop and already set up to use GitHub, you don’t need to do the steps in this section, but if you’re using your laptop and not set up to use GitHub, these instructions should work there too. (it may also depend on the version of <code>git</code> you are using; e.g., version 2.34.1 is too old but 2.39 should be fine). You’ll need to install <code>gh-scoped-creds</code> via <code>pip install</code>.</p>
-<p>That said, if you haven’t already used Git on your laptop and pushed changes up to GitHub, it’s best if you work in DataHub so that we don’t have to troubleshoot laptop issues for multiple participants.</p>
+<p>If you’re doing all your work on your laptop and not using DataHub at all and if you’re already set up to use GitHub, you don’t need to do the steps in this section.</p>
+<p>But if you’re using your laptop and not set up to use GitHub, these instructions should work there too (it may also depend on the version of <code>git</code> you are using; e.g., version 2.34.1 is too old but 2.39 should be fine). You’ll need to install <code>gh-scoped-creds</code> via <code>pip install</code>.</p>
+<p>That said, if you haven’t already used Git on your laptop and successfully pushed changes up to GitHub in the past, it’s best if you work in DataHub so that we don’t have to troubleshoot laptop issues for multiple participants.</p>
 </div>
 </div>
 <p>We’ll use a tool (an ‘app’) that helps us with this, provided in the <code>gh_scoped_creds</code> Python package.</p>
@@ -360,14 +361,14 @@ Accessing GitHub from your laptop rather than DataHub
 <p>Then run this in the terminal:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh-scoped-creds</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or you could instead run this in IPython or Jupyter Notebook:</p>
-<div id="6e6c6521" class="cell" data-execution_count="1">
+<div id="c8297a1d" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gh_scoped_creds</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>ghscopedcreds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then follow these steps:</p>
 <ul>
-<li>When you run <code>gh-scoped-creds</code> above, you’ll see a <a href="https://github.com/login/device" target="_blank">link to github.com/login/device</a> and a code.</li>
-<li>Go to the <a href="https://github.com/login/device" target="_blank">link to github.com/login/device</a> in a browser (on your laptop, outside of DataHub) and login to GitHub (or click <code>Continue</code> if already logged in).</li>
+<li>When you run <code>gh-scoped-creds</code> above, you’ll see a <a href="https://github.com/login/device" target="_blank">link to https://github.com/login/device</a> and a code.</li>
+<li>Go to that link in a browser (on your laptop, outside of DataHub) and login to GitHub (or click <code>Continue</code> if already logged in).</li>
 <li>Input the code, and click <code>Authorize Berkeley-DataHub-Git-Access</code>. This will grant access to GitHub from DataHub (i.e., JupyterHub) for 8 hours (or until you stop your JupyterHub server).</li>
 </ul>
 </section>

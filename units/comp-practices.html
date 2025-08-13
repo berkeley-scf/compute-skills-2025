@@ -276,7 +276,7 @@ window.Quarto = {
   <li><a href="#a-repository" id="toc-a-repository" class="nav-link" data-scroll-target="#a-repository">A repository</a></li>
   <li><a href="#staging-area-index" id="toc-staging-area-index" class="nav-link" data-scroll-target="#staging-area-index">Staging area / index</a></li>
   </ul></li>
-  <li><a href="#exercise-code-review" id="toc-exercise-code-review" class="nav-link" data-scroll-target="#exercise-code-review">Exercise: code review</a></li>
+  <li><a href="#exercise-code-review-with-a-partner" id="toc-exercise-code-review-with-a-partner" class="nav-link" data-scroll-target="#exercise-code-review-with-a-partner">Exercise: code review (with a partner)</a></li>
   </ul></li>
   <li><a href="#code-style-and-documentation" id="toc-code-style-and-documentation" class="nav-link" data-scroll-target="#code-style-and-documentation">4. Code style and documentation</a>
   <ul class="collapse">
@@ -374,7 +374,7 @@ x_t = x_{t-1} - f^{\prime}(x_{t-1}) / f^{\prime\prime}(x_{t-1})
 <li>stop when <span class="math inline">\(\left\Vert x_{t} - x_{t-1} \right\Vert\)</span> is “small”</li>
 </ul></li>
 </ul>
-<p>You can derive it by finding the root of the gradient function using a Taylor series approximation to the gradient.</p>
+<p>You can derive it by finding the root (aka zero) of the gradient function using a Taylor series approximation to the gradient.</p>
 </section>
 <section id="exercise-implement-univariate-newtons-method" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-implement-univariate-newtons-method">Exercise: Implement univariate Newton’s method</h2>
@@ -400,7 +400,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Don’t make your finite difference (“epsilon”) too small or you’ll actually get inaccurate estimates. (We’ll discuss why when we talk a bit out numerical issues in computing later.)</p>
+<p>Don’t make your finite difference (“epsilon”) too small or you’ll actually get inaccurate estimates. (We’ll discuss why when we talk a bit about <a href="additional-topics.html#calculation-errors">numerical issues in computing</a> later.)</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -413,7 +413,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For now, please do not use any Python packages that provide finite difference-based derivatives (we’ll do that later, and it’s helpful to have more code available for the work we’ll do today).</p>
+<p>For now, please do not use any Python packages that provide finite difference-based derivatives. (We’ll do that later, and it’s helpful to have more code available for the work we’ll do today.)</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -426,7 +426,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You’re welcome to develop your code in a Notebook or in the DataHub editor or in a separate editor on your laptop.</p>
+<p>You’re welcome to develop your code in a Jupyter Notebook, in the DataHub editor, in a separate editor on your laptop, or in VS Code on the DataHub (or your laptop).</p>
 </div>
 </div>
 <p>Once you’ve written your Python functions, put your code into a simple text file, called <code>newton.py</code>. In doing so you’ve created a Python <em>module</em>.</p>
@@ -444,7 +444,7 @@ Warning
 </div>
 </div>
 <p>Once you have your module, you can use it like this:</p>
-<div id="a8b6cc0c" class="cell" data-execution_count="1">
+<div id="b8a16832" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -466,7 +466,7 @@ Warning
 <li>Provide a short description</li>
 <li>Click on “Add a README file”.</li>
 <li>Leave the repository as “Public” so that others can interact with your repository when we practice later.</li>
-<li>Scroll down to <code>Python</code> under <code>Add .gitignore</code>.</li>
+<li>Scroll down to select <code>Python</code> under <code>Add .gitignore</code>.</li>
 <li>Select a license (the BSD 3 Clause license is a good “permissive” one).</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -493,12 +493,12 @@ Creating repositories on your laptop first
 <p>In the terminal, let’s make a small change to the README, register the change with Git (this is called a <em>commit</em>), and push the changes upstream to GitHub (which has the <em>remote</em> copy of the repository).</p>
 <section id="step-1.-clone-the-repository" class="level4">
 <h4 class="anchored" data-anchor-id="step-1.-clone-the-repository">Step 1. Clone the repository</h4>
-<p>First make a local copy of the repository from the remote on GitHub. It’s best do this <strong>outside</strong> of the <code>compute-skills-2025</code> directory; otherwise you’ll have a repository nested within a repository.</p>
+<p>First make a local copy of the repository from the remote copy on GitHub. It’s best do this <strong>outside</strong> of the <code>compute-skills-2025</code> directory; otherwise you’ll have a repository nested within a repository.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## First `cd` to your home directory to avoid cloning a repo within a repo.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>your_username<span class="op">&gt;</span>/newton-practice</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If we run this:</p>
+<p>Now if we run this:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> newton-practice</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> .git</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .git/config</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -616,7 +616,7 @@ Note
 <li>Have a subject line separated from the body by a blank line.
 <ul>
 <li>Keep subject to 50 characters and each body line to 72 characters.</li>
-<li>Best to edit message in an editor – omit the <code>-m</code> flag to <code>git commit</code>.</li>
+<li>Best to edit message in an editor: omit the <code>-m</code> flag to <code>git commit</code>.</li>
 </ul></li>
 </ol></li>
 <li>If you’re working on a project with GitHub issues, reference the issue at the bottom.</li>
@@ -627,8 +627,8 @@ Note
 </section>
 <section id="exercise-put-your-code-in-your-repository" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-put-your-code-in-your-repository">Exercise: Put your code in your repository</h2>
-<p>Add your new code to your repository. Then commit it, providing a meaningful commit message.</p>
-<p>You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we’ll troubleshoot any problems with pushing then.</p>
+<p>Following the steps above, add your new code to your repository. Then commit it, providing a meaningful commit message.</p>
+<p>You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we’ll troubleshoot any problems with pushing to GitHub then.</p>
 </section>
 </section>
 <section id="understanding-git" class="level1">
@@ -652,7 +652,7 @@ More than the syntax
 <h2 class="anchored" data-anchor-id="git-visuals-understanding-git-concepts">Git visuals: Understanding Git concepts</h2>
 <p>Fernando’s Statistics 159/259 materials have a nice visualization (<a href="https://docs.google.com/presentation/d/1YlM3boYLE8DwbxGNO3ZVVt3e9gEoBgD1uc9RtItUYCU">online version</a>, <a href="git_visuals.pdf">PDF version</a>) of a basic Git workflow that we’ll walk through.</p>
 <p>Note that we haven’t actually seen in practice some of what is shown in the visual: tags, branches, and merging, but we’ll be using those ideas later.</p>
-<p><a href="https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html">Fernando’s lecture materials from Statistics 159/259</a> illustrate that the steps shown in the visualization correspond exactly to what ppens when running the Git commands from the command line.</p>
+<p><a href="https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html">Fernando’s lecture materials from Statistics 159/259</a> illustrate that the steps shown in the visualization correspond exactly to what happens when running the Git commands from the command line.</p>
 </section>
 <section id="key-components-and-terminology" class="level2">
 <h2 class="anchored" data-anchor-id="key-components-and-terminology">Key components and terminology</h2>
@@ -671,10 +671,10 @@ More than the syntax
 <figcaption>Figure: A Git commit (Credit: ProGit book, CC License)</figcaption>
 </figure>
 </div>
-<p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash include information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</p>
+<p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</p>
 <p>We can illustrate what Git is doing easily in Python.</p>
 <p>Let’s create a first hash:</p>
-<div id="6a6482cd" class="cell" data-execution_count="2">
+<div id="3803c842" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hashlib <span class="im">import</span> sha1</span>
@@ -690,7 +690,7 @@ More than the syntax
 </div>
 </div>
 <p>￼ Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
-<div id="ef7f3cf3" class="cell" data-execution_count="3">
+<div id="6b2d3513" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> <span class="st">b'Some more text in my paper...'</span></span>
@@ -814,8 +814,8 @@ Rolling back changes (optional)
 </div>
 </section>
 </section>
-<section id="exercise-code-review" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-code-review">Exercise: code review</h2>
+<section id="exercise-code-review-with-a-partner" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-code-review-with-a-partner">Exercise: code review (with a partner)</h2>
 <section id="step-0-push-your-changes-to-github" class="level4">
 <h4 class="anchored" data-anchor-id="step-0-push-your-changes-to-github">Step 0: Push your changes to GitHub</h4>
 <p>This will make them easily available to your partner and mimics the process we want/need to use anyway when interacting with remote collaborators or working asynchronously. Do your collaboration on GitHub, which is designed to help with collaboration, and not via email/text/etc.</p>
@@ -833,7 +833,7 @@ Rolling back changes (optional)
 <h4 class="anchored" data-anchor-id="step-2-respond-to-suggestions">Step 2: Respond to suggestions</h4>
 <p>In response to your partner’s comments, make some small change(s) to your <code>newton.py</code> code.</p>
 <p>You can do this in DataHub (or locally on your laptop if that’s what you’re doing) and make a commit as we did in the previous exercise.</p>
-<p>Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the <code>+</code> button in the top of the left sidebar. If you make changes directly on GitHub, you’ll also want to run <code>git pull</code> to pull down the changes to your local repository on DataHub or your laptop.</p>
+<p>Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the <code>+</code> button in the top of the left sidebar. If you make changes directly on GitHub, you’ll also want to run <code>git pull</code> to pull down the changes to your local repository on DataHub.</p>
 </section>
 </section>
 </section>
@@ -877,8 +877,8 @@ Q: Who is the person most likely to use your code again?
 <li><p>Avoid code lines longer than 79 characters and comment/docstring lines longer than 72 characters.</p></li>
 <li><p>Comments:</p>
 <ul>
-<li>Add comments to explain why, not how.</li>
-<li>Don’t belabor the obvious; avoid things like <code>x = x + 1  # Increment x.</code>.</li>
+<li>Add comments to explain <em>why</em>, not <em>how</em>.</li>
+<li>Don’t restate the obvious; avoid things like <code>x = x + 1  # Increment x.</code>.</li>
 <li>Some key things to document:
 <ul>
 <li>summarizing a block of code,</li>
@@ -888,7 +888,7 @@ Q: Who is the person most likely to use your code again?
 <li>Comments should generally be complete sentences.</li>
 </ul></li>
 <li><p>You can use parentheses to group operations such that they can be split up into lines and easily commented, e.g.,</p>
-<div id="1e752321" class="cell" data-execution_count="4">
+<div id="401e79a2" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> (</span>
@@ -906,8 +906,8 @@ Q: Who is the person most likely to use your code again?
 </ul></li>
 <li><p>Try to have the names be informative without being overly long.</p></li>
 <li><p>Don’t overwrite names of objects/functions that already exist in the language. E.g., don’t use <code>len</code> in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</p></li>
-<li><p>Use active names for functions (e.g., <code>calc_loglik</code>, <code>calc_log_lik</code> rather than <code>loglik</code> or <code>loglik_calc</code>). Functions are akin to verbs.</p></li>
-<li><p>Learn from others’ code</p></li>
+<li><p>Use active names for functions (e.g., <code>calc_loglik</code>, <code>calc_log_lik</code> rather than <code>loglik</code> or <code>loglik_calc</code>). Functions are like to verbs in human language.</p></li>
+<li><p>Learn from others’ code.</p></li>
 </ul>
 <section id="linting" class="level2">
 <h2 class="anchored" data-anchor-id="linting">Linting</h2>
@@ -918,7 +918,7 @@ Q: Who is the person most likely to use your code again?
 <li><p>First, we check for and fix syntax errors.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ruff</span> check newton.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Then we ask <code>ruff</code> to reformat to conform to standard style.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> newton.py newton-save.py   <span class="co"># So we can see what `ruff did.</span></span>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> newton.py newton-save.py   <span class="co"># So we can see what `ruff` did.</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ruff</span> format newton.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 <p>Let’s see what changed:</p>
@@ -927,7 +927,7 @@ Q: Who is the person most likely to use your code again?
 <section id="exercise-add-documentation-and-comments-to-your-newton-module" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-add-documentation-and-comments-to-your-newton-module">Exercise: add documentation and comments to your Newton module</h2>
 <ol type="1">
-<li>Add a <a href="https://peps.python.org/pep-0257">doc string</a> to each of your functions. Focus on your main function. Take a look at an example, such as <code>help(numpy.linalg.cholesky)</code> to see the different parts and the format.</li>
+<li>Add a <a href="https://peps.python.org/pep-0257">doc string</a> to each of your functions. Focus on your main function. Take a look at an example, such as <code>help(numpy.linalg.cholesky)</code> to see the different parts and the format. Docstrings are also a good thing to ask an AI coding tool to help with.</li>
 <li>Consider whether to add comments to your code.</li>
 <li>Apply <code>ruff</code> to your code.</li>
 <li>Compare the results with the style suggestions above and do additional reformatting as needed.</li>
@@ -952,7 +952,7 @@ Q: Who is the person most likely to use your code again?
 <section id="using-the-jupyterlab-visual-debugger" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-jupyterlab-visual-debugger">Using the JupyterLab visual debugger</h3>
 <p>Let’s debug my buggy implementation of Newton’s method.</p>
-<div id="185a4cd6" class="cell" data-execution_count="5">
+<div id="1ae27ab9" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -1077,9 +1077,9 @@ Only write tests now
 <pre><code>import warnings
 if x &gt; 3:
    warnings.warn(f"{x} is greater than 3.", UserWarning)</code></pre>
-<p>Next, if you have time, consider robustifying your code if you have time:</p>
+<p>Next, if you have time, consider robustifying your code:</p>
 <ul>
-<li>What might you do if the next step is worse than the current position?<br>
+<li>What might you do to modify what the algorithm does if the next step is worse than the current position?<br>
 </li>
 <li>What might you do if the next step is outside the range of potential values (assuming a unimodal function)?</li>
 </ul>
@@ -1585,7 +1585,7 @@ if x &gt; 3:
 <span id="cb30-42"><a href="#cb30-42" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>at step $t$, the next value (the update) is given by the equation above</span>
 <span id="cb30-43"><a href="#cb30-43" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>stop when $\left\Vert x_{t} - x_{t-1} \right\Vert$ is "small"</span>
 <span id="cb30-44"><a href="#cb30-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-45"><a href="#cb30-45" aria-hidden="true" tabindex="-1"></a>You can derive it by finding the root of the gradient function using a Taylor series approximation to the gradient.</span>
+<span id="cb30-45"><a href="#cb30-45" aria-hidden="true" tabindex="-1"></a>You can derive it by finding the root (aka zero) of the gradient function using a Taylor series approximation to the gradient.</span>
 <span id="cb30-46"><a href="#cb30-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-47"><a href="#cb30-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Implement univariate Newton's method</span></span>
 <span id="cb30-48"><a href="#cb30-48" aria-hidden="true" tabindex="-1"></a></span>
@@ -1603,16 +1603,16 @@ if x &gt; 3:
 <span id="cb30-60"><a href="#cb30-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-61"><a href="#cb30-61" aria-hidden="true" tabindex="-1"></a>   </span>
 <span id="cb30-62"><a href="#cb30-62" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb30-63"><a href="#cb30-63" aria-hidden="true" tabindex="-1"></a>Don't make your finite difference ("epsilon") too small or you'll actually get inaccurate estimates. (We'll discuss why when we talk a bit out numerical issues in computing later.)</span>
+<span id="cb30-63"><a href="#cb30-63" aria-hidden="true" tabindex="-1"></a>Don't make your finite difference ("epsilon") too small or you'll actually get inaccurate estimates. (We'll discuss why when we talk a bit about <span class="co">[</span><span class="ot">numerical issues in computing</span><span class="co">](additional-topics.html#calculation-errors)</span> later.)</span>
 <span id="cb30-64"><a href="#cb30-64" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-65"><a href="#cb30-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-66"><a href="#cb30-66" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb30-67"><a href="#cb30-67" aria-hidden="true" tabindex="-1"></a>For now, please do not use any Python packages that provide finite difference-based derivatives (we'll do that later, and it's helpful to have more code available for the work we'll do today).</span>
+<span id="cb30-67"><a href="#cb30-67" aria-hidden="true" tabindex="-1"></a>For now, please do not use any Python packages that provide finite difference-based derivatives. (We'll do that later, and it's helpful to have more code available for the work we'll do today.)</span>
 <span id="cb30-68"><a href="#cb30-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-69"><a href="#cb30-69" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-70"><a href="#cb30-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-71"><a href="#cb30-71" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb30-72"><a href="#cb30-72" aria-hidden="true" tabindex="-1"></a>You're welcome to develop your code in a Notebook or in the DataHub editor or in a separate editor on your laptop.</span>
+<span id="cb30-72"><a href="#cb30-72" aria-hidden="true" tabindex="-1"></a>You're welcome to develop your code in a Jupyter Notebook, in the DataHub editor, in a separate editor on your laptop, or in VS Code on the DataHub (or your laptop).</span>
 <span id="cb30-73"><a href="#cb30-73" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-74"><a href="#cb30-74" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-75"><a href="#cb30-75" aria-hidden="true" tabindex="-1"></a>Once you've written your Python functions, put your code into a simple text file, called <span class="in">`newton.py`</span>. In doing so you've created a Python *module*.</span>
@@ -1647,7 +1647,7 @@ if x &gt; 3:
 <span id="cb30-106"><a href="#cb30-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Provide a short description</span>
 <span id="cb30-107"><a href="#cb30-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Click on "Add a README file".</span>
 <span id="cb30-108"><a href="#cb30-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Leave the repository as "Public" so that others can interact with your repository when we practice later.</span>
-<span id="cb30-109"><a href="#cb30-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Scroll down to <span class="in">`Python`</span> under <span class="in">`Add .gitignore`</span>.</span>
+<span id="cb30-109"><a href="#cb30-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Scroll down to select <span class="in">`Python`</span> under <span class="in">`Add .gitignore`</span>.</span>
 <span id="cb30-110"><a href="#cb30-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Select a license (the BSD 3 Clause license is a good "permissive" one).</span>
 <span id="cb30-111"><a href="#cb30-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-112"><a href="#cb30-112" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
@@ -1668,7 +1668,7 @@ if x &gt; 3:
 <span id="cb30-127"><a href="#cb30-127" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-128"><a href="#cb30-128" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Step 1. Clone the repository</span></span>
 <span id="cb30-129"><a href="#cb30-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-130"><a href="#cb30-130" aria-hidden="true" tabindex="-1"></a>First make a local copy of the repository from the remote on GitHub. It's best do this **outside** of the <span class="in">`compute-skills-2025`</span> directory; otherwise you'll have a repository nested within a repository. </span>
+<span id="cb30-130"><a href="#cb30-130" aria-hidden="true" tabindex="-1"></a>First make a local copy of the repository from the remote copy on GitHub. It's best do this **outside** of the <span class="in">`compute-skills-2025`</span> directory; otherwise you'll have a repository nested within a repository. </span>
 <span id="cb30-131"><a href="#cb30-131" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-132"><a href="#cb30-132" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb30-133"><a href="#cb30-133" aria-hidden="true" tabindex="-1"></a><span class="co">## First `cd` to your home directory to avoid cloning a repo within a repo.</span></span>
@@ -1677,7 +1677,7 @@ if x &gt; 3:
 <span id="cb30-136"><a href="#cb30-136" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>your_username<span class="op">&gt;</span>/newton-practice</span>
 <span id="cb30-137"><a href="#cb30-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb30-138"><a href="#cb30-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-139"><a href="#cb30-139" aria-hidden="true" tabindex="-1"></a>If we run this:</span>
+<span id="cb30-139"><a href="#cb30-139" aria-hidden="true" tabindex="-1"></a>Now if we run this:</span>
 <span id="cb30-140"><a href="#cb30-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-141"><a href="#cb30-141" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
 <span id="cb30-142"><a href="#cb30-142" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> newton-practice</span>
@@ -1784,7 +1784,7 @@ if x &gt; 3:
 <span id="cb30-243"><a href="#cb30-243" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Keep it short (one line, &lt;72 characters)</span>
 <span id="cb30-244"><a href="#cb30-244" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Have a subject line separated from the body by a blank line.</span>
 <span id="cb30-245"><a href="#cb30-245" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Keep subject to 50 characters and each body line to 72 characters.</span>
-<span id="cb30-246"><a href="#cb30-246" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Best to edit message in an editor -- omit the <span class="in">`-m`</span> flag to <span class="in">`git commit`</span>.</span>
+<span id="cb30-246"><a href="#cb30-246" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Best to edit message in an editor: omit the <span class="in">`-m`</span> flag to <span class="in">`git commit`</span>.</span>
 <span id="cb30-247"><a href="#cb30-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you're working on a project with GitHub issues, reference the issue at the bottom.</span>
 <span id="cb30-248"><a href="#cb30-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Start each item in the message with a verb (present tense) and provide a complete sentence.</span>
 <span id="cb30-249"><a href="#cb30-249" aria-hidden="true" tabindex="-1"></a></span>
@@ -1793,9 +1793,9 @@ if x &gt; 3:
 <span id="cb30-252"><a href="#cb30-252" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-253"><a href="#cb30-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: Put your code in your repository</span></span>
 <span id="cb30-254"><a href="#cb30-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-255"><a href="#cb30-255" aria-hidden="true" tabindex="-1"></a>Add your new code to your repository. Then commit it, providing a meaningful commit message.</span>
+<span id="cb30-255"><a href="#cb30-255" aria-hidden="true" tabindex="-1"></a>Following the steps above, add your new code to your repository. Then commit it, providing a meaningful commit message.</span>
 <span id="cb30-256"><a href="#cb30-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-257"><a href="#cb30-257" aria-hidden="true" tabindex="-1"></a>You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we'll troubleshoot any problems with pushing then.</span>
+<span id="cb30-257"><a href="#cb30-257" aria-hidden="true" tabindex="-1"></a>You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we'll troubleshoot any problems with pushing to GitHub then.</span>
 <span id="cb30-258"><a href="#cb30-258" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-259"><a href="#cb30-259" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-260"><a href="#cb30-260" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Understanding Git</span></span>
@@ -1817,7 +1817,7 @@ if x &gt; 3:
 <span id="cb30-276"><a href="#cb30-276" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-277"><a href="#cb30-277" aria-hidden="true" tabindex="-1"></a>Note that we haven't actually seen in practice some of what is shown in the visual: tags, branches, and merging, but we'll be using those ideas later.</span>
 <span id="cb30-278"><a href="#cb30-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-279"><a href="#cb30-279" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Fernando's lecture materials from Statistics 159/259</span><span class="co">](https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html)</span> illustrate that the steps shown in the visualization correspond exactly to what ppens when running the Git commands from the command line.</span>
+<span id="cb30-279"><a href="#cb30-279" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Fernando's lecture materials from Statistics 159/259</span><span class="co">](https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html)</span> illustrate that the steps shown in the visualization correspond exactly to what happens when running the Git commands from the command line.</span>
 <span id="cb30-280"><a href="#cb30-280" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-281"><a href="#cb30-281" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-282"><a href="#cb30-282" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key components and terminology</span></span>
@@ -1834,7 +1834,7 @@ if x &gt; 3:
 <span id="cb30-293"><a href="#cb30-293" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-294"><a href="#cb30-294" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure: A Git commit (Credit: ProGit book, CC License)](commit.png "visualization of a git commit")</span></span>
 <span id="cb30-295"><a href="#cb30-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-296"><a href="#cb30-296" aria-hidden="true" tabindex="-1"></a>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash include information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</span>
+<span id="cb30-296"><a href="#cb30-296" aria-hidden="true" tabindex="-1"></a>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</span>
 <span id="cb30-297"><a href="#cb30-297" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-298"><a href="#cb30-298" aria-hidden="true" tabindex="-1"></a>We can illustrate what Git is doing easily in Python.</span>
 <span id="cb30-299"><a href="#cb30-299" aria-hidden="true" tabindex="-1"></a></span>
@@ -1988,7 +1988,7 @@ if x &gt; 3:
 <span id="cb30-451"><a href="#cb30-451" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb30-452"><a href="#cb30-452" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-453"><a href="#cb30-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-454"><a href="#cb30-454" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: code review</span></span>
+<span id="cb30-454"><a href="#cb30-454" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: code review (with a partner)</span></span>
 <span id="cb30-455"><a href="#cb30-455" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-456"><a href="#cb30-456" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Step 0: Push your changes to GitHub</span></span>
 <span id="cb30-457"><a href="#cb30-457" aria-hidden="true" tabindex="-1"></a></span>
@@ -2011,7 +2011,7 @@ if x &gt; 3:
 <span id="cb30-474"><a href="#cb30-474" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-475"><a href="#cb30-475" aria-hidden="true" tabindex="-1"></a>You can do this in DataHub (or locally on your laptop if that's what you're doing) and make a commit as we did in the previous exercise.</span>
 <span id="cb30-476"><a href="#cb30-476" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-477"><a href="#cb30-477" aria-hidden="true" tabindex="-1"></a>Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the <span class="in">`+`</span> button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run <span class="in">`git pull`</span> to pull down the changes to your local repository on DataHub or your laptop.</span>
+<span id="cb30-477"><a href="#cb30-477" aria-hidden="true" tabindex="-1"></a>Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the <span class="in">`+`</span> button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run <span class="in">`git pull`</span> to pull down the changes to your local repository on DataHub.</span>
 <span id="cb30-478"><a href="#cb30-478" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-479"><a href="#cb30-479" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Code style and documentation</span></span>
 <span id="cb30-480"><a href="#cb30-480" aria-hidden="true" tabindex="-1"></a></span>
@@ -2049,8 +2049,8 @@ if x &gt; 3:
 <span id="cb30-512"><a href="#cb30-512" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Avoid code lines longer than 79 characters and comment/docstring lines</span>
 <span id="cb30-513"><a href="#cb30-513" aria-hidden="true" tabindex="-1"></a>    longer than 72 characters.</span>
 <span id="cb30-514"><a href="#cb30-514" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Comments:</span>
-<span id="cb30-515"><a href="#cb30-515" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Add comments to explain why, not how.</span>
-<span id="cb30-516"><a href="#cb30-516" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Don't belabor the obvious; avoid things like <span class="in">`x = x + 1  # Increment x.`</span>.</span>
+<span id="cb30-515"><a href="#cb30-515" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Add comments to explain *why*, not *how*.</span>
+<span id="cb30-516"><a href="#cb30-516" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Don't restate the obvious; avoid things like <span class="in">`x = x + 1  # Increment x.`</span>.</span>
 <span id="cb30-517"><a href="#cb30-517" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Some key things to document:</span>
 <span id="cb30-518"><a href="#cb30-518" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>summarizing a block of code,</span>
 <span id="cb30-519"><a href="#cb30-519" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>explaining a complicated piece of code or particular construction, and</span>
@@ -2073,8 +2073,8 @@ if x &gt; 3:
 <span id="cb30-536"><a href="#cb30-536" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try to have the names be informative without being overly long.</span>
 <span id="cb30-537"><a href="#cb30-537" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Don't overwrite names of objects/functions that already exist in the language. E.g., don't use <span class="in">`len`</span> in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.</span>
 <span id="cb30-538"><a href="#cb30-538" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use active names for functions (e.g., <span class="in">`calc_loglik`</span>, <span class="in">`calc_log_lik`</span></span>
-<span id="cb30-539"><a href="#cb30-539" aria-hidden="true" tabindex="-1"></a>    rather than <span class="in">`loglik`</span> or <span class="in">`loglik_calc`</span>). Functions are akin to verbs.</span>
-<span id="cb30-540"><a href="#cb30-540" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn from others' code</span>
+<span id="cb30-539"><a href="#cb30-539" aria-hidden="true" tabindex="-1"></a>    rather than <span class="in">`loglik`</span> or <span class="in">`loglik_calc`</span>). Functions are like to verbs in human language.</span>
+<span id="cb30-540"><a href="#cb30-540" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Learn from others' code.</span>
 <span id="cb30-541"><a href="#cb30-541" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-542"><a href="#cb30-542" aria-hidden="true" tabindex="-1"></a><span class="fu">## Linting</span></span>
 <span id="cb30-543"><a href="#cb30-543" aria-hidden="true" tabindex="-1"></a></span>
@@ -2090,7 +2090,7 @@ if x &gt; 3:
 <span id="cb30-553"><a href="#cb30-553" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
 <span id="cb30-554"><a href="#cb30-554" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Then we ask <span class="in">`ruff`</span> to reformat to conform to standard style.</span>
 <span id="cb30-555"><a href="#cb30-555" aria-hidden="true" tabindex="-1"></a>  <span class="in">```bash</span></span>
-<span id="cb30-556"><a href="#cb30-556" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cp</span> newton.py newton-save.py   <span class="co"># So we can see what `ruff did.</span></span>
+<span id="cb30-556"><a href="#cb30-556" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cp</span> newton.py newton-save.py   <span class="co"># So we can see what `ruff` did.</span></span>
 <span id="cb30-557"><a href="#cb30-557" aria-hidden="true" tabindex="-1"></a>  <span class="ex">ruff</span> format newton.py</span>
 <span id="cb30-558"><a href="#cb30-558" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
 <span id="cb30-559"><a href="#cb30-559" aria-hidden="true" tabindex="-1"></a></span>
@@ -2102,7 +2102,7 @@ if x &gt; 3:
 <span id="cb30-565"><a href="#cb30-565" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-566"><a href="#cb30-566" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise: add documentation and comments to your Newton module</span></span>
 <span id="cb30-567"><a href="#cb30-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-568"><a href="#cb30-568" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Add a <span class="co">[</span><span class="ot">doc string</span><span class="co">](https://peps.python.org/pep-0257)</span> to each of your functions. Focus on your main function. Take a look at an example, such as <span class="in">`help(numpy.linalg.cholesky)`</span> to see the different parts and the format.</span>
+<span id="cb30-568"><a href="#cb30-568" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Add a <span class="co">[</span><span class="ot">doc string</span><span class="co">](https://peps.python.org/pep-0257)</span> to each of your functions. Focus on your main function. Take a look at an example, such as <span class="in">`help(numpy.linalg.cholesky)`</span> to see the different parts and the format. Docstrings are also a good thing to ask an AI coding tool to help with.</span>
 <span id="cb30-569"><a href="#cb30-569" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Consider whether to add comments to your code.</span>
 <span id="cb30-570"><a href="#cb30-570" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Apply <span class="in">`ruff`</span> to your code.</span>
 <span id="cb30-571"><a href="#cb30-571" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Compare the results with the style suggestions above and do additional reformatting as needed.</span>
@@ -2262,9 +2262,9 @@ if x &gt; 3:
 <span id="cb30-727"><a href="#cb30-727" aria-hidden="true" tabindex="-1"></a><span class="in">   warnings.warn(f"{x} is greater than 3.", UserWarning)</span></span>
 <span id="cb30-728"><a href="#cb30-728" aria-hidden="true" tabindex="-1"></a><span class="in">```</span>  </span>
 <span id="cb30-729"><a href="#cb30-729" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-730"><a href="#cb30-730" aria-hidden="true" tabindex="-1"></a>Next, if you have time, consider robustifying your code if you have time:</span>
+<span id="cb30-730"><a href="#cb30-730" aria-hidden="true" tabindex="-1"></a>Next, if you have time, consider robustifying your code:</span>
 <span id="cb30-731"><a href="#cb30-731" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-732"><a href="#cb30-732" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do if the next step is worse than the current position?  </span>
+<span id="cb30-732"><a href="#cb30-732" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do to modify what the algorithm does if the next step is worse than the current position?  </span>
 <span id="cb30-733"><a href="#cb30-733" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What might you do if the next step is outside the range of potential values (assuming a unimodal function)? </span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
