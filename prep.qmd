@@ -61,6 +61,12 @@ If you only log out, any ongoing computations will still run in the background.
 
 (These instructions are needed only for the main sessions of the workshop, Wednesday and Thursday.)
 
+::: {.callout-important title="You need a GitHub account"}
+If you don't already have a GitHub account, please [sign up for one](https://github.com/signup).
+
+:::
+
+
 **Please don't do the steps in this section until after we do the exercise where you create your `newton-practice` repository.**
 
 Authenticating with GitHub can be a bit tricky, particularly when using DataHub (i.e., JupyterHub).
