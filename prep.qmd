@@ -73,11 +73,11 @@ Authenticating with GitHub can be a bit tricky, particularly when using DataHub 
 
 ::: {.callout-note}
 ## Accessing GitHub from your laptop rather than DataHub
-If you're on your laptop and already set up to use GitHub, you don't need to do the steps in this section,
-but if you're using your laptop and not set up to use GitHub, these instructions should work there too.
-(it may also depend on the version of `git` you are using; e.g., version 2.34.1 is too old but 2.39 should be fine). You'll need to install `gh-scoped-creds` via `pip install`.
+If you're doing all your work on your laptop and not using DataHub at all and if you're already set up to use GitHub, you don't need to do the steps in this section.
 
-That said, if you haven't already used Git on your laptop and pushed changes up to GitHub, it's best if you work
+But if you're using your laptop and not set up to use GitHub, these instructions should work there too (it may also depend on the version of `git` you are using; e.g., version 2.34.1 is too old but 2.39 should be fine). You'll need to install `gh-scoped-creds` via `pip install`.
+
+That said, if you haven't already used Git on your laptop and successfully pushed changes up to GitHub in the past, it's best if you work
 in DataHub so that we don't have to troubleshoot laptop issues for multiple participants.
 
 :::
@@ -119,8 +119,8 @@ import gh_scoped_creds
 
 Then follow these steps:
 
-- When you run `gh-scoped-creds` above, you'll see a [link to github.com/login/device](https://github.com/login/device){target="_blank"} and a code.
-- Go to the [link to github.com/login/device](https://github.com/login/device){target="_blank"} in a browser (on your laptop, outside of DataHub) and login to GitHub (or click `Continue` if already logged in).
+- When you run `gh-scoped-creds` above, you'll see a [link to https://github.com/login/device](https://github.com/login/device){target="_blank"} and a code.
+- Go to that link in a browser (on your laptop, outside of DataHub) and login to GitHub (or click `Continue` if already logged in).
 - Input the code, and click `Authorize Berkeley-DataHub-Git-Access`. This will grant access to GitHub from DataHub (i.e., JupyterHub) for 8 hours (or until you stop your JupyterHub server).
 
 ### 3. Give access to the specific GitHub repository you are working with

@@ -42,7 +42,7 @@ Here are the steps:
   - at step $t$, the next value (the update) is given by the equation above
   - stop when $\left\Vert x_{t} - x_{t-1} \right\Vert$ is "small"
 
-You can derive it by finding the root of the gradient function using a Taylor series approximation to the gradient.
+You can derive it by finding the root (aka zero) of the gradient function using a Taylor series approximation to the gradient.
 
 ## Exercise: Implement univariate Newton's method
 
@@ -60,16 +60,16 @@ Here's what you'll need your code to do:
 
    
 ::: {.callout-warning}
-Don't make your finite difference ("epsilon") too small or you'll actually get inaccurate estimates. (We'll discuss why when we talk a bit out numerical issues in computing later.)
+Don't make your finite difference ("epsilon") too small or you'll actually get inaccurate estimates. (We'll discuss why when we talk a bit about [numerical issues in computing](additional-topics.html#calculation-errors) later.)
 :::
 
 ::: {.callout-note}
-For now, please do not use any Python packages that provide finite difference-based derivatives (we'll do that later, and it's helpful to have more code available for the work we'll do today).
+For now, please do not use any Python packages that provide finite difference-based derivatives. (We'll do that later, and it's helpful to have more code available for the work we'll do today.)
 
 :::
 
 ::: {.callout-tip}
-You're welcome to develop your code in a Notebook or in the DataHub editor or in a separate editor on your laptop.
+You're welcome to develop your code in a Jupyter Notebook, in the DataHub editor, in a separate editor on your laptop, or in VS Code on the DataHub (or your laptop).
 :::
 
 Once you've written your Python functions, put your code into a simple text file, called `newton.py`. In doing so you've created a Python *module*.
@@ -104,7 +104,7 @@ Go to `github.com/<your_username>` and click on the `Repositories` tag. Then cli
 - Provide a short description
 - Click on "Add a README file".
 - Leave the repository as "Public" so that others can interact with your repository when we practice later.
-- Scroll down to `Python` under `Add .gitignore`.
+- Scroll down to select `Python` under `Add .gitignore`.
 - Select a license (the BSD 3 Clause license is a good "permissive" one).
 
 ::: {.callout-note}
@@ -125,7 +125,7 @@ In the terminal, let's make a small change to the README, register the change wi
 
 #### Step 1. Clone the repository
 
-First make a local copy of the repository from the remote on GitHub. It's best do this **outside** of the `compute-skills-2025` directory; otherwise you'll have a repository nested within a repository. 
+First make a local copy of the repository from the remote copy on GitHub. It's best do this **outside** of the `compute-skills-2025` directory; otherwise you'll have a repository nested within a repository. 
 
 ```bash
 ## First `cd` to your home directory to avoid cloning a repo within a repo.
@@ -134,7 +134,7 @@ cd
 git clone https://github.com/<your_username>/newton-practice
 ```
 
-If we run this:
+Now if we run this:
 
 ```bash
 cd newton-practice
@@ -241,7 +241,7 @@ Some tips:
   1. Keep it short (one line, <72 characters)
   2. Have a subject line separated from the body by a blank line.
       - Keep subject to 50 characters and each body line to 72 characters.
-      - Best to edit message in an editor -- omit the `-m` flag to `git commit`.
+      - Best to edit message in an editor: omit the `-m` flag to `git commit`.
 - If you're working on a project with GitHub issues, reference the issue at the bottom.
 - Start each item in the message with a verb (present tense) and provide a complete sentence.
 
@@ -250,9 +250,9 @@ have made multiple ("atomic") commits.
 
 ## Exercise: Put your code in your repository
 
-Add your new code to your repository. Then commit it, providing a meaningful commit message.
+Following the steps above, add your new code to your repository. Then commit it, providing a meaningful commit message.
 
-You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we'll troubleshoot any problems with pushing then.
+You could push it to GitHub if you want, but that will be part of the exercise at the end of Section 3, so we'll troubleshoot any problems with pushing to GitHub then.
 
 
 # 3. Understanding Git
@@ -274,7 +274,7 @@ Fernando's Statistics 159/259 materials have a nice visualization ([online versi
 
 Note that we haven't actually seen in practice some of what is shown in the visual: tags, branches, and merging, but we'll be using those ideas later.
 
-[Fernando's lecture materials from Statistics 159/259](https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html) illustrate that the steps shown in the visualization correspond exactly to what ppens when running the Git commands from the command line.
+[Fernando's lecture materials from Statistics 159/259](https://ucb-stat-159-s23.github.io/site/lectures/intro-git/git-visuals.html) illustrate that the steps shown in the visualization correspond exactly to what happens when running the Git commands from the command line.
 
 
 ## Key components and terminology
@@ -291,7 +291,7 @@ Each commit has:
 
 ![Figure: A Git commit (Credit: ProGit book, CC License)](commit.png "visualization of a git commit")
 
-We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash include information of the parent node, since this allow us to keep the check the structural consistency of the DAG.
+We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.
 
 We can illustrate what Git is doing easily in Python.
 
@@ -445,7 +445,7 @@ This will remove the previous commit at the remote (GitHub in our case).
 :::
 
 
-## Exercise: code review
+## Exercise: code review (with a partner)
 
 #### Step 0: Push your changes to GitHub
 
@@ -468,7 +468,7 @@ In response to your partner's comments, make some small change(s) to your `newto
 
 You can do this in DataHub (or locally on your laptop if that's what you're doing) and make a commit as we did in the previous exercise.
 
-Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the `+` button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run `git pull` to pull down the changes to your local repository on DataHub or your laptop.
+Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the `+` button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run `git pull` to pull down the changes to your local repository on DataHub.
 
 # 4. Code style and documentation
 
@@ -506,8 +506,8 @@ Here are a few key suggestions:
 - Avoid code lines longer than 79 characters and comment/docstring lines
     longer than 72 characters.
 - Comments:
-    - Add comments to explain why, not how.
-    - Don't belabor the obvious; avoid things like `x = x + 1  # Increment x.`.
+    - Add comments to explain *why*, not *how*.
+    - Don't restate the obvious; avoid things like `x = x + 1  # Increment x.`.
     - Some key things to document:
       - summarizing a block of code,
       - explaining a complicated piece of code or particular construction, and
@@ -530,8 +530,8 @@ Here are a few key suggestions:
 - Try to have the names be informative without being overly long.
 - Don't overwrite names of objects/functions that already exist in the language. E.g., don't use `len` in Python. That said, the namespace system helps with the unavoidable cases where there are name conflicts.
 - Use active names for functions (e.g., `calc_loglik`, `calc_log_lik`
-    rather than `loglik` or `loglik_calc`). Functions are akin to verbs.
-- Learn from others' code
+    rather than `loglik` or `loglik_calc`). Functions are like to verbs in human language.
+- Learn from others' code.
 
 ## Linting
 
@@ -547,7 +547,7 @@ We'll practice with `ruff` with a small module we'll use next also for debugging
   ```
 - Then we ask `ruff` to reformat to conform to standard style.
   ```bash
-  cp newton.py newton-save.py   # So we can see what `ruff did.
+  cp newton.py newton-save.py   # So we can see what `ruff` did.
   ruff format newton.py
   ```
 
@@ -559,7 +559,7 @@ diff newton-save.py newton.py
 
 ## Exercise: add documentation and comments to your Newton module
 
-1. Add a [doc string](https://peps.python.org/pep-0257) to each of your functions. Focus on your main function. Take a look at an example, such as `help(numpy.linalg.cholesky)` to see the different parts and the format.
+1. Add a [doc string](https://peps.python.org/pep-0257) to each of your functions. Focus on your main function. Take a look at an example, such as `help(numpy.linalg.cholesky)` to see the different parts and the format. Docstrings are also a good thing to ask an AI coding tool to help with.
 2. Consider whether to add comments to your code.
 3. Apply `ruff` to your code.
 4. Compare the results with the style suggestions above and do additional reformatting as needed.
@@ -719,8 +719,8 @@ if x > 3:
    warnings.warn(f"{x} is greater than 3.", UserWarning)
 ```  
 
-Next, if you have time, consider robustifying your code if you have time:
+Next, if you have time, consider robustifying your code:
 
-- What might you do if the next step is worse than the current position?  
+- What might you do to modify what the algorithm does if the next step is worse than the current position?  
 - What might you do if the next step is outside the range of potential values (assuming a unimodal function)? 
 
