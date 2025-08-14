@@ -878,7 +878,7 @@
     "href": "prep.html",
     "title": "Using DataHub as a commmon computational environment",
     "section": "",
-    "text": "While in principle, it’s fine to use your laptop, it will be hard for us to diagnose all the different problems that might arise with so many participants. So we recommend using a common computational environment during the workshop. We’ll use the Berkeley DataHub for this. You can think of DataHub as providing user-specific virtual machines with identical software for all of us to use.\nThe exception is that if you already have experience using your laptop with the shell/terminal, Git (and pushing to GitHub) and Python.\nThat will get you onto your server with the materials for the course, from the berkeley-scf/compute-skills-2025 repository available on the server.",
+    "text": "While in principle, it’s fine to use your laptop, it will be hard for us to diagnose all the different problems that might arise with so many participants. So we recommend using a common computational environment during the workshop. We’ll use the Berkeley DataHub for this, with is a JupyterHub provided by UC Berkeley. You can think of DataHub as providing user-specific virtual machines with identical software for all of us to use.\nThe exception is that if you already have experience using your laptop with the shell/terminal, Git (and pushing to GitHub) and Python.\nThat will get you onto your server with the materials for the course, from the berkeley-scf/compute-skills-2025 repository available on the server.",
     "crumbs": [
       "Computational Environment"
     ]
@@ -888,7 +888,7 @@
     "href": "prep.html#check-your-environment",
     "title": "Using DataHub as a commmon computational environment",
     "section": "Check your environment",
-    "text": "Check your environment\nTo check things look good:\n\nClick on Terminal (in the 3rd row of the Launcher tab, under Other). (If you have trouble finding the Terminal, go to File -&gt; New -&gt; Terminal.)\nCheck that your working directory is ~/compute-skills-2025 (by looking at the terminal prompt or running pwd)\nRun ls to see the files in the repository.",
+    "text": "Check your environment\nTo check things look good:\n\nClick on Terminal (in the 3rd row of the Launcher tab, under Other). (If you have trouble finding the Terminal, go to File -&gt; New -&gt; Terminal.)\nRun cd ~/compute-skills-2025 (this may already be your current directory, in which case this step is not needed).\nRun ls to see the files in the repository.",
     "crumbs": [
       "Computational Environment"
     ]

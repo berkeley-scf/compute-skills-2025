@@ -257,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>While in principle, it’s fine to use your laptop, it will be hard for us to diagnose all the different problems that might arise with so many participants. So we recommend using a common computational environment during the workshop. We’ll use the Berkeley DataHub for this. You can think of DataHub as providing user-specific virtual machines with identical software for all of us to use.</p>
+<p>While in principle, it’s fine to use your laptop, it will be hard for us to diagnose all the different problems that might arise with so many participants. So we recommend using a common computational environment during the workshop. We’ll use the Berkeley DataHub for this, with is a JupyterHub provided by UC Berkeley. You can think of DataHub as providing user-specific virtual machines with identical software for all of us to use.</p>
 <p>The exception is that if you already have experience using your laptop with the shell/terminal, Git (and pushing to GitHub) and Python.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Accessing the DataHub environment">
 <div class="callout-header d-flex align-content-center">
@@ -291,7 +291,7 @@ Warning
 <p>To check things look good:</p>
 <ol type="1">
 <li>Click on <code>Terminal</code> (in the 3rd row of the <code>Launcher</code> tab, under <code>Other</code>). (If you have trouble finding the Terminal, go to <code>File</code> -&gt; <code>New</code> -&gt; <code>Terminal</code>.)</li>
-<li>Check that your working directory is <code>~/compute-skills-2025</code> (by looking at the terminal prompt or running <code>pwd</code>)</li>
+<li>Run <code>cd ~/compute-skills-2025</code> (this may already be your current directory, in which case this step is not needed).</li>
 <li>Run <code>ls</code> to see the files in the repository.</li>
 </ol>
 </section>
@@ -361,7 +361,7 @@ Accessing GitHub from your laptop rather than DataHub
 <p>Then run this in the terminal:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh-scoped-creds</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or you could instead run this in IPython or Jupyter Notebook:</p>
-<div id="c8297a1d" class="cell" data-execution_count="1">
+<div id="73011e5c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gh_scoped_creds</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>ghscopedcreds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
