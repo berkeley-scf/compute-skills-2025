@@ -600,13 +600,43 @@ We'll work in our Jupyter notebook.
 
 - First turn on debugging capability by clicking on the small "bug" icon of the top navigation bar under the file tabs and to the left of the  info about the kernel.
 - Next we click on a line of code to set a breakpoint.
-- Now we run the function by executing the cell containing the function call. We can:
+- Now we run the function by executing the cell containing the function call. Using the icons in the `Callstack` pane, we can:
   - continue (to the end or the next breakpoint),
   - finish,
   - run the next line,
   - step (in/down) into a nested function
   - step (out/up) out of a function, or
-  - evaluate an expression (one needs to click on the "log" icon at the bottom to see the output).
+  - evaluate an expression
+    - the output may show up in the notebook, but one can also click on the "log" icon at the bottom and set the "Log Level" to "debug" to see the output in a separate logging pane at the bottom.
+
+Here are screenshots showing the steps/components of the visual debugger:
+
+::: {.panel-tabset}
+## Access debugger
+
+![](shot1a.pdf "Access the debugger"){width=800 height=600}
+
+## Start execution
+
+![](shot2a.pdf "Set a breakpoint and start execution"){width=800 height=600}
+
+## Step into code
+
+![](shot3a.pdf "Step into a function"){width=800 height=600}
+
+## Control execution
+
+![](shot4a.pdf "Control execution"){width=800 height=600}
+
+## Evaluate code
+
+![](shot5a.pdf "Evaluate code in context"){width=800 height=600}
+
+## View result
+
+![](shot6a.pdf "View result of evaluation"){width=800 height=600}
+
+:::
 
 If we want to debug into functions defined in files, we can add `breakpoint()` in the location in the file where we want the breakpoint and one should see the code in the `SOURCE` box in the debugger panel. So far, I've found this to be a bit hard to use, but that may well just be my inexperience with the JupyterLab debugger.
 
