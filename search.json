@@ -261,168 +261,56 @@
     "href": "units/solutions-python.html",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "",
-    "text": "Exercise 1\n\n\n\nUsing the section on “Built-in Types” from the official “The Python Standard Library” reference, figure out how to compute: - \\(\\sqrt(-1)\\)\n- \\(\\exp(1.5)\\) - \\((\\lceil \\frac{3}{4} \\rceil \\times 4)^3\\),"
+    "text": "Exercise 1\n\n\n\nUsing the section on “Built-in Types” from the official “The Python Standard Library” reference, figure out how to compute: - \\(\\sqrt(-1)\\)\n- \\(\\exp(1.5)\\) - \\((\\lceil \\frac{3}{4} \\rceil \\times 4)^3\\),\n\n\n\n\n\n\n\n\nExercise 1 Solution\n\n\n\n\n\n\n\nCode\npow(-1, 0.5)\n(-1)**0.5\n\nimport math\nmath.exp(1.5)\n\n(math.ceil(3/4) * 4)**3\n\n\n64\n\n\n\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\n\nIs 1.0 of the integer type? What about 1? Is the result of 5/3 - 2/3 of the integer type? Is the mathematical value seen in Python an integer?\nHere’s a numerical puzzle. Why does the last computation not work, when the others do? And, for those of you coming from R, which of these computations don’t work in R?\n\n\nCode\n100000**10\n100000.0**10\n100000**100\n100000.0**100\n\n\n\n\n\n\n\n\n\n\n\nExercise 2 Solution\n\n\n\n\n\n\n\nCode\ntype(1.0)\ntype(1)\ntype(5/3-2/3)\n5/3-2/3 == 1\n\ntype(100000**10)\ntype(100000.0**10)\n\n\nfloat"
   },
   {
     "objectID": "units/solutions-python.html#python-fundamentals",
     "href": "units/solutions-python.html#python-fundamentals",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "",
-    "text": "Exercise 1\n\n\n\nUsing the section on “Built-in Types” from the official “The Python Standard Library” reference, figure out how to compute: - \\(\\sqrt(-1)\\)\n- \\(\\exp(1.5)\\) - \\((\\lceil \\frac{3}{4} \\rceil \\times 4)^3\\),"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-1-solution",
-    "href": "units/solutions-python.html#exercise-1-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 1 Solution",
-    "text": "Exercise 1 Solution\n\n\nCode\npow(-1, 0.5)\n(-1)**0.5\n\nimport math\nmath.exp(1.5)\n\n(math.ceil(3/4) * 4)**3\n\n\n64"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-2-solution",
-    "href": "units/solutions-python.html#exercise-2-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 2 Solution",
-    "text": "Exercise 2 Solution\n\n\nCode\ntype(1.0)\ntype(1)\ntype(5/3-2/3)\n5/3-2/3 == 1\n\ntype(100000**10)\ntype(100000.0**10)\n\n\nfloat"
+    "text": "Exercise 1\n\n\n\nUsing the section on “Built-in Types” from the official “The Python Standard Library” reference, figure out how to compute: - \\(\\sqrt(-1)\\)\n- \\(\\exp(1.5)\\) - \\((\\lceil \\frac{3}{4} \\rceil \\times 4)^3\\),\n\n\n\n\n\n\n\n\nExercise 1 Solution\n\n\n\n\n\n\n\nCode\npow(-1, 0.5)\n(-1)**0.5\n\nimport math\nmath.exp(1.5)\n\n(math.ceil(3/4) * 4)**3\n\n\n64\n\n\n\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\n\nIs 1.0 of the integer type? What about 1? Is the result of 5/3 - 2/3 of the integer type? Is the mathematical value seen in Python an integer?\nHere’s a numerical puzzle. Why does the last computation not work, when the others do? And, for those of you coming from R, which of these computations don’t work in R?\n\n\nCode\n100000**10\n100000.0**10\n100000**100\n100000.0**100\n\n\n\n\n\n\n\n\n\n\n\nExercise 2 Solution\n\n\n\n\n\n\n\nCode\ntype(1.0)\ntype(1)\ntype(5/3-2/3)\n5/3-2/3 == 1\n\ntype(100000**10)\ntype(100000.0**10)\n\n\nfloat"
   },
   {
     "objectID": "units/solutions-python.html#analyzing-patient-data",
     "href": "units/solutions-python.html#analyzing-patient-data",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "2. Analyzing Patient Data",
-    "text": "2. Analyzing Patient Data\n\n\n\n\n\n\nExercise 2\n\n\n\nNote that ? and ?? only work in IPython (or a Jupyter notebook). For help in plain Python, use help(np.ndim).\n\nWhat happens if you type np.ndim?? (i.e., use two question marks)? What additional do you see?\nWhat does np.ndim() do? How does it execute under the hood? Consider why the following uses of ndim both work.\n\n\nCode\na = np.array([0, 1, 2])\na.ndim\nnp.ndim(a)\n\n\nNow explain why only one of these works.\n\n\nCode\na = [0, 1, 2]\na.ndim\nnp.ndim(a)\n\n\nType np.array? in a Notebook or at the IPython prompt. Briefly skim the docstring. nparray allows you to construct numpy arrays.\nType np. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt. Choose two or three of the completions and use ? to view their docstrings. In particular, pay attention to the examples provided near the end of the docstring and see whether you can figure out how you might use this functionality."
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-1-solution-1",
-    "href": "units/solutions-python.html#exercise-1-solution-1",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 1 Solution",
-    "text": "Exercise 1 Solution\n\n\nCode\na = [0, 1, 2]\n# a.ndim  # This errors out.\n\nimport numpy as np\nnp.asarray(a)\nnp.asarray(a).ndim\n\n\n1"
+    "text": "2. Analyzing Patient Data\n\n\n\n\n\n\nExercise 2\n\n\n\nNote that ? and ?? only work in IPython (or a Jupyter notebook). For help in plain Python, use help(np.ndim).\n\nWhat happens if you type np.ndim?? (i.e., use two question marks)? What additional do you see?\nWhat does np.ndim() do? How does it execute under the hood? Consider why the following uses of ndim both work.\n\n\nCode\na = np.array([0, 1, 2])\na.ndim\nnp.ndim(a)\n\n\nNow explain why only one of these works.\n\n\nCode\na = [0, 1, 2]\na.ndim\nnp.ndim(a)\n\n\nType np.array? in a Notebook or at the IPython prompt. Briefly skim the docstring. nparray allows you to construct numpy arrays.\nType np. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt. Choose two or three of the completions and use ? to view their docstrings. In particular, pay attention to the examples provided near the end of the docstring and see whether you can figure out how you might use this functionality.\n\n\n\n\n\n\n\n\n\nExercise 1 Solution\n\n\n\n\n\n\n\nCode\na = [0, 1, 2]\n# a.ndim  # This errors out.\n\nimport numpy as np\nnp.asarray(a)\nnp.asarray(a).ndim\n\n\n1"
   },
   {
     "objectID": "units/solutions-python.html#visualizing-tabular-data",
     "href": "units/solutions-python.html#visualizing-tabular-data",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "3. Visualizing Tabular Data",
-    "text": "3. Visualizing Tabular Data\n\n\n\n\n\n\nExercise\n\n\n\nUsing the following code, read in the GapMinder data using Pandas (to be discussed later) and run the following code to make the variables easily available (you don’t need to know anything about Pandas).\n\n\nCode\nimport numpy as np\nimport pandas as pd\ndat = pd.read_csv('gapminder.csv')\nlifeExp = np.array(dat.lifeExp)\ngdpPercap = np.array(dat.gdpPercap)\nyear = np.array(dat.year)\n\n## Hint: slicing using an array of booleans\n## gdpPercap[year &gt; 2010]\n\n\n\nMake a scatterplot of lifeExp vs gdpPerCap for 2007; make sure you have nice axis labels and title.\nConsider whether plotting income on a logarithmic axis is a better way to display the data.\nUsing at least two years, make an array of plots (in one figure) where each subplot is a different year."
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-solution",
-    "href": "units/solutions-python.html#exercise-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise solution",
-    "text": "Exercise solution\n\n\nCode\nimport numpy as np\nimport pandas as pd\ndat = pd.read_csv('gapminder.csv')\nlifeExp = np.array(dat.lifeExp)\ngdpPercap = np.array(dat.gdpPercap)\nyear = np.array(dat.year)\n\nimport matplotlib.pyplot as plt\nmyplot = plt.plot(gdpPercap, lifeExp, 'bo')\nplt.show()\n\nmyplot = plt.plot(np.log(gdpPercap), lifeExp, 'bo')\nplt.show()\n\nfig = plt.figure()\nsubplot1 = fig.add_subplot(1, 2, 1)\nsubplot2 = fig.add_subplot(1, 2, 2)\n\nsubplot1.plot(np.log(gdpPercap[year == 1952]), lifeExp[year == 1952], 'bo')\nsubplot2.plot(np.log(gdpPercap[year == 2007]), lifeExp[year == 2007], 'bo')\n\nsubplot1.set_title('1952')\nsubplot2.set_title('2007')\n\nsubplot1.set_xlabel('per capita GDP (log dollars)')\nsubplot1.set_ylabel('life expectancy (years)')\n\nsubplot2.set_xlabel('per capita GDP (log dollars)')\n\nplt.show()"
+    "text": "3. Visualizing Tabular Data\n\n\n\n\n\n\nExercise\n\n\n\nUsing the following code, read in the GapMinder data using Pandas (to be discussed later) and run the following code to make the variables easily available (you don’t need to know anything about Pandas).\n\n\nCode\nimport numpy as np\nimport pandas as pd\ndat = pd.read_csv('gapminder.csv')\nlifeExp = np.array(dat.lifeExp)\ngdpPercap = np.array(dat.gdpPercap)\nyear = np.array(dat.year)\n\n## Hint: slicing using an array of booleans\n## gdpPercap[year &gt; 2010]\n\n\n\nMake a scatterplot of lifeExp vs gdpPerCap for 2007; make sure you have nice axis labels and title.\nConsider whether plotting income on a logarithmic axis is a better way to display the data.\nUsing at least two years, make an array of plots (in one figure) where each subplot is a different year.\n\n\n\n\n\n\n\n\n\nExercise solution\n\n\n\n\n\n\n\nCode\nimport numpy as np\nimport pandas as pd\ndat = pd.read_csv('gapminder.csv')\nlifeExp = np.array(dat.lifeExp)\ngdpPercap = np.array(dat.gdpPercap)\nyear = np.array(dat.year)\n\nimport matplotlib.pyplot as plt\nmyplot = plt.plot(gdpPercap, lifeExp, 'bo')\nplt.show()\n\nmyplot = plt.plot(np.log(gdpPercap), lifeExp, 'bo')\nplt.show()\n\nfig = plt.figure()\nsubplot1 = fig.add_subplot(1, 2, 1)\nsubplot2 = fig.add_subplot(1, 2, 2)\n\nsubplot1.plot(np.log(gdpPercap[year == 1952]), lifeExp[year == 1952], 'bo')\nsubplot2.plot(np.log(gdpPercap[year == 2007]), lifeExp[year == 2007], 'bo')\n\nsubplot1.set_title('1952')\nsubplot2.set_title('2007')\n\nsubplot1.set_xlabel('per capita GDP (log dollars)')\nsubplot1.set_ylabel('life expectancy (years)')\n\nsubplot2.set_xlabel('per capita GDP (log dollars)')\n\nplt.show()"
   },
   {
     "objectID": "units/solutions-python.html#storing-multiple-values-in-lists",
     "href": "units/solutions-python.html#storing-multiple-values-in-lists",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "4. Storing Multiple Values in Lists",
-    "text": "4. Storing Multiple Values in Lists\n\n\n\n\n\n\nExercise 1\n\n\n\nCreate a list of numbers, called x1. Reverse the order of the items in the list using slicing. Now reverse the order of the items using a list method. How does using the method differ from slicing? Hint: you can type x. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list."
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-1-solution-2",
-    "href": "units/solutions-python.html#exercise-1-solution-2",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 1 solution",
-    "text": "Exercise 1 solution\n\n\nCode\nx1 = [1, 2, 3, 4]\nprint(x1[::-1])\nprint(x1)\nx1.reverse()\nprint(x1)\n\n\n[4, 3, 2, 1]\n[1, 2, 3, 4]\n[4, 3, 2, 1]"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-2-solution-1",
-    "href": "units/solutions-python.html#exercise-2-solution-1",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 2 solution",
-    "text": "Exercise 2 solution\n\n\nCode\nx1 = [1, 2, 3, 4]\nx2 = ['apple', 'banana']\n\nprint(x1 + x2)\nx1.append(x2)\nprint(x1)\n\nx1 = [1, 2, 3, 4]\nx1.extend(x2)\nprint(x1)\n\n# x1.sort() # This errors out.\n\n\n[1, 2, 3, 4, 'apple', 'banana']\n[1, 2, 3, 4, ['apple', 'banana']]\n[1, 2, 3, 4, 'apple', 'banana']"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-4-1",
-    "href": "units/solutions-python.html#exercise-4-1",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 4",
-    "text": "Exercise 4\nWhat does the following tell you about copying and use of memory in lists in Python?\n\n\nCode\na = [1, 3, 5]\nb = a\nid(a)\nid(b)\n\nprint(id(a) == id(b))\na[1] = 5\na\nb\n\n\nTrue\n\n\n[1, 5, 5]"
+    "text": "4. Storing Multiple Values in Lists\n\n\n\n\n\n\nExercise 1\n\n\n\nCreate a list of numbers, called x1. Reverse the order of the items in the list using slicing. Now reverse the order of the items using a list method. How does using the method differ from slicing? Hint: you can type x. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.\n\n\n\n\n\n\n\n\nExercise 1 solution\n\n\n\n\n\n\n\nCode\nx1 = [1, 2, 3, 4]\nprint(x1[::-1])\nprint(x1)\nx1.reverse()\nprint(x1)\n\n\n[4, 3, 2, 1]\n[1, 2, 3, 4]\n[4, 3, 2, 1]\n\n\n\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\n\nFigure out some different ways of combining your list of numbers with a list of strings to create a single list of mixed type elements. (Hint: you can type x. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.)\nNow try to sort the resulting list. What happens?\n\n\n\n\n\n\n\n\n\nExercise 2 solution\n\n\n\n\n\n\n\nCode\nx1 = [1, 2, 3, 4]\nx2 = ['apple', 'banana']\n\nprint(x1 + x2)\nx1.append(x2)\nprint(x1)\n\nx1 = [1, 2, 3, 4]\nx1.extend(x2)\nprint(x1)\n\n# x1.sort() # This errors out.\n\n\n[1, 2, 3, 4, 'apple', 'banana']\n[1, 2, 3, 4, ['apple', 'banana']]\n[1, 2, 3, 4, 'apple', 'banana']\n\n\n\n\n\n\n\n\n\n\n\nExercise 4\n\n\n\nWhat does the following tell you about copying and use of memory in lists in Python?\n\n\nCode\na = [1, 3, 5]\nb = a\nid(a)\nid(b)\n# this should confirm what you might suspect\na[1] = 5\n\n\n\n\n\n\n\n\n\n\nExercise 4\n\n\n\n\n\nWhat does the following tell you about copying and use of memory in lists in Python?\n\n\nCode\na = [1, 3, 5]\nb = a\nid(a)\nid(b)\n\nprint(id(a) == id(b))\na[1] = 5\na\nb\n\n\nTrue\n\n\n[1, 5, 5]"
   },
   {
     "objectID": "units/solutions-python.html#repeating-actions-with-loops",
     "href": "units/solutions-python.html#repeating-actions-with-loops",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "5. Repeating Actions with Loops",
-    "text": "5. Repeating Actions with Loops\n\n\n\n\n\n\nExercises\n\n\n\n\nSee what [1, 2, 3] + 3 returns. Try to explain what happened and why.\nHow would you do the same task using a for loop? The range function may be helpful as might the enumerate function.\nUse list comprehension to perform the same element-wise addition of the scalar to the list of scalars.\nChange [1, 2, 3] to be a numpy array and then add three using + 3."
-  },
-  {
-    "objectID": "units/solutions-python.html#exercises-solutions",
-    "href": "units/solutions-python.html#exercises-solutions",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercises solutions",
-    "text": "Exercises solutions\n\n\nCode\nmylist = [1, 2, 3]\n\n## for loop\nfor i in range(len(mylist)):\n    mylist[i] += 3\n\n## list comprehension\n[x+3 for x in mylist]\n\n## numpy (best!)\nnplist = np.array([mylist]) + 3"
+    "text": "5. Repeating Actions with Loops\n\n\n\n\n\n\nExercises\n\n\n\n\nSee what [1, 2, 3] + 3 returns. Try to explain what happened and why.\nHow would you do the same task using a for loop? The range function may be helpful as might the enumerate function.\nUse list comprehension to perform the same element-wise addition of the scalar to the list of scalars.\nChange [1, 2, 3] to be a numpy array and then add three using + 3.\n\n\n\n\n\n\n\n\n\nExercises solutions\n\n\n\n\n\n\n\nCode\nmylist = [1, 2, 3]\n\n## for loop\nfor i in range(len(mylist)):\n    mylist[i] += 3\n\n## list comprehension\n[x+3 for x in mylist]\n\n## numpy (best!)\nnplist = np.array([mylist]) + 3"
   },
   {
     "objectID": "units/solutions-python.html#creating-functions",
     "href": "units/solutions-python.html#creating-functions",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "8. Creating Functions",
-    "text": "8. Creating Functions\n\n\n\n\n\n\nExercise 1\n\n\n\nDefine a function called sqrt that will take the square root of a number and will (if requested by the user) set the square root of a negative number to 0."
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-1-solution-3",
-    "href": "units/solutions-python.html#exercise-1-solution-3",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 1 solution",
-    "text": "Exercise 1 solution\n\n\nCode\ndef sqrt(x, complex=False):\n    if complex and x &lt; 0:\n       return 0\n    return pow(x, 0.5)"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-2-solution-2",
-    "href": "units/solutions-python.html#exercise-2-solution-2",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 2 solution",
-    "text": "Exercise 2 solution\n\n\nCode\nmylist = [1, 2, 3]\nmynum = 1\n\ndef testfun(x):\n    x[1] = 9\n\ndef testfun2(x):\n    x = 9\n\ntestfun(mylist)\nprint(mylist)\n\ntestfun2(mynum)\nprint(mynum)\n\n\n[1, 9, 3]\n1"
+    "text": "8. Creating Functions\n\n\n\n\n\n\nExercise 1\n\n\n\nDefine a function called sqrt that will take the square root of a number and will (if requested by the user) set the square root of a negative number to 0.\n\n\n\n\n\n\n\n\nExercise 1 solution\n\n\n\n\n\n\n\nCode\ndef sqrt(x, complex=False):\n    if complex and x &lt; 0:\n       return 0\n    return pow(x, 0.5)\n\n\n\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\n\nWhat happens if you modify a list within a function in Python; why do you think this is?\nWhat happens if you modify a single number (scalar) within a function in Python; why do you think this is?\n\n\n\n\n\n\n\n\n\nExercise 2 solution\n\n\n\n\n\n\n\nCode\nmylist = [1, 2, 3]\nmynum = 1\n\ndef testfun(x):\n    x[1] = 9\n\ndef testfun2(x):\n    x = 9\n\ntestfun(mylist)\nprint(mylist)\n\ntestfun2(mynum)\nprint(mynum)\n\n\n[1, 9, 3]\n1"
   },
   {
     "objectID": "units/solutions-python.html#extra-part-1.-some-other-useful-data-structures",
     "href": "units/solutions-python.html#extra-part-1.-some-other-useful-data-structures",
     "title": "SOLUTIONS: Introduction to Python (optional)",
     "section": "EXTRA Part 1. Some other useful data structures",
-    "text": "EXTRA Part 1. Some other useful data structures\n\n\n\n\n\n\nExercise 1\n\n\n\n\nWhat’s weird about this? What are the types involved?\n\n\nCode\nz = x,y\na,b = x,y\n\n\nCreate the following: x=5 and y=99. Now swap their values using a single line of code. (For R users, how would you do this in R?)"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-1-solution-4",
-    "href": "units/solutions-python.html#exercise-1-solution-4",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 1 solution",
-    "text": "Exercise 1 solution\n\n\nCode\nx = 5\ny = 99\n\nz = x,y\na,b = x,y\n\nprint(type(z))\nprint(type(a))\n\ny,x = x,y\n\n\n&lt;class 'tuple'&gt;\n&lt;class 'int'&gt;"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-2-solution-3",
-    "href": "units/solutions-python.html#exercise-2-solution-3",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 2 solution",
-    "text": "Exercise 2 solution\n\n\nCode\nx = (1,2,3)\nx * 3\n\n\n(1, 2, 3, 1, 2, 3, 1, 2, 3)"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-3-solution",
-    "href": "units/solutions-python.html#exercise-3-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 3 solution",
-    "text": "Exercise 3 solution\nFor a list, reverse reverses the elements in place in the list, but this would violate the rule that tuples cannot be modified.\nSometimes we want to use fixed values that can’t change, and using immutable objects is a way to guarantee that. It’s an aspect of “defensive” programming."
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-4-solution",
-    "href": "units/solutions-python.html#exercise-4-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 4 solution",
-    "text": "Exercise 4 solution\n\n\nCode\nx = {\"department\": \"Statistics\", \"location\": \"Evans\", \"floor\": 3}\nx.update({'university': 'Berkeley'})\nx['country'] = 'USA'\nprint(x)\n\n\n{'department': 'Statistics', 'location': 'Evans', 'floor': 3, 'university': 'Berkeley', 'country': 'USA'}"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-5-solution",
-    "href": "units/solutions-python.html#exercise-5-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 5 solution",
-    "text": "Exercise 5 solution\n\n\nCode\nx = {\"department\": \"Statistics\", \"location\": \"Evans\", \"floor\": 3}\ny = {'university': 'Berkeley'}\n\nz = x.copy()\nz.update(y)\nprint(z)\n\n\n{'department': 'Statistics', 'location': 'Evans', 'floor': 3, 'university': 'Berkeley'}"
-  },
-  {
-    "objectID": "units/solutions-python.html#exercise-6-solution",
-    "href": "units/solutions-python.html#exercise-6-solution",
-    "title": "SOLUTIONS: Introduction to Python (optional)",
-    "section": "Exercise 6 solution",
-    "text": "Exercise 6 solution\nNamed arrays and named lists can function like dictionaries, but the names can be repeated, unlike with dictionaries."
+    "text": "EXTRA Part 1. Some other useful data structures\n\n\n\n\n\n\nExercise 1\n\n\n\n\nWhat’s weird about this? What are the types involved?\n\n\nCode\nz = x,y\na,b = x,y\n\n\nCreate the following: x=5 and y=99. Now swap their values using a single line of code. (For R users, how would you do this in R?)\n\n\n\n\n\n\n\n\n\nExercise 1 solution\n\n\n\n\n\n\n\nCode\nx = 5\ny = 99\n\nz = x,y\na,b = x,y\n\nprint(type(z))\nprint(type(a))\n\ny,x = x,y\n\n\n&lt;class 'tuple'&gt;\n&lt;class 'int'&gt;\n\n\n\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\nWhat happens when you multiply a tuple by a number?\n\n\n\n\n\n\n\n\nExercise 2 solution\n\n\n\n\n\n\n\nCode\nx = (1,2,3)\nx * 3\n\n\n(1, 2, 3, 1, 2, 3, 1, 2, 3)\n\n\n\n\n\n\n\n\n\n\n\nExercise 3\n\n\n\n\nWhy do you think there is no reverse method for tuples?\nWhat’s nice about using immutable objects in your code?\n\n\n\n\n\n\n\n\n\nExercise 3 solution\n\n\n\n\n\nFor a list, reverse reverses the elements in place in the list, but this would violate the rule that tuples cannot be modified.\nSometimes we want to use fixed values that can’t change, and using immutable objects is a way to guarantee that. It’s an aspect of “defensive” programming.\n\n\n\n\n\n\n\n\n\nExercise 4\n\n\n\nHow can you add an item to a dictionary?\n\n\n\n\n\n\n\n\nExercise 4 solution\n\n\n\n\n\n\n\nCode\nx = {\"department\": \"Statistics\", \"location\": \"Evans\", \"floor\": 3}\nx.update({'university': 'Berkeley'})\nx['country'] = 'USA'\nprint(x)\n\n\n{'department': 'Statistics', 'location': 'Evans', 'floor': 3, 'university': 'Berkeley', 'country': 'USA'}\n\n\n\n\n\n\n\n\n\n\n\nExercise 5\n\n\n\nHow do you combine two dictionaries into a single dictionary?\n\n\n\n\n\n\n\n\nExercise 5 solution\n\n\n\n\n\n\n\nCode\nx = {\"department\": \"Statistics\", \"location\": \"Evans\", \"floor\": 3}\ny = {'university': 'Berkeley'}\n\nz = x.copy()\nz.update(y)\nprint(z)\n\n\n{'department': 'Statistics', 'location': 'Evans', 'floor': 3, 'university': 'Berkeley'}\n\n\n\n\n\n\n\n\n\n\n\nExercise 6 (for R users)\n\n\n\n\nWhat are some analogs to dictionaries in R?\nHow are dictionaries different from such analogous structures in R?\n\n\n\n\n\n\n\n\n\nExercise 6 solution\n\n\n\n\n\nNamed arrays and named lists can function like dictionaries, but the names can be repeated, unlike with dictionaries."
   },
   {
     "objectID": "units/intro-python.html",
@@ -473,7 +361,7 @@
     "href": "units/intro-python.html#storing-multiple-values-in-lists",
     "title": "Introduction to Python (optional)",
     "section": "4. Storing Multiple Values in Lists",
-    "text": "4. Storing Multiple Values in Lists\nWe’ll work through the Storing Multiple Values in Lists section of the Software Carpentry workshop. The primary ideas covered are creating, extracting from, and manipulating lists.\n\n\n\n\n\n\nExercise 1\n\n\n\nCreate a list of numbers, called x1. Reverse the order of the items in the list using slicing. Now reverse the order of the items using a list method. How does using the method differ from slicing? Hint: you can type x. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\n\nFigure out some different ways of combining your list of numbers with a list of strings to create a single list of mixed type elements. (Hint: you can type x. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.)\nNow try to sort the resulting list. What happens?\n\n\n\n\n\n\n\n\n\nExercise 3\n\n\n\nAnswer the question related to Overloading in the Software Carpentry section.\n\n\n\n\n\n\n\n\nExercise 4\n\n\n\nWhat does the following tell you about copying and use of memory in lists in Python?\n\n\nCode\na = [1, 3, 5]\nb = a\nid(a)\nid(b)\n# this should confirm what you might suspect\na[1] = 5",
+    "text": "4. Storing Multiple Values in Lists\nWe’ll work through the Storing Multiple Values in Lists section of the Software Carpentry workshop. The primary ideas covered are creating, extracting from, and manipulating lists.\n\n\n\n\n\n\nExercise 1\n\n\n\nCreate a list of numbers, called x1. Reverse the order of the items in the list using slicing. Now reverse the order of the items using a list method. How does using the method differ from slicing? Hint: you can type x1. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\n\nFigure out some different ways of combining your list of numbers with a list of strings to create a single list of mixed type elements. (Hint: you can type x1. followed by the &lt;Tab&gt; key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.)\nNow try to sort the resulting list. What happens?\n\n\n\n\n\n\n\n\n\nExercise 3\n\n\n\nAnswer the question related to Overloading in the Software Carpentry section.\n\n\n\n\n\n\n\n\nExercise 4\n\n\n\nWhat does the following tell you about copying and use of memory in lists in Python?\n\n\nCode\na = [1, 3, 5]\nb = a\nid(a)\nid(b)\n# this should confirm what you might suspect\na[1] = 5",
     "crumbs": [
       "Modules",
       "Intro to Python (optional)"
