@@ -26,7 +26,7 @@ Standard Library" reference](https://docs.python.org/3/library/index.html), figu
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercise 1 Solution
 
 ```{python}
@@ -55,7 +55,7 @@ math.exp(1.5)
   ```
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercise 2 Solution
 
 ```{python}
@@ -102,7 +102,7 @@ Note that `?` and `??` only work in IPython (or a Jupyter notebook). For help in
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercise 1 Solution
 
 ```{python}
@@ -142,7 +142,7 @@ year = np.array(dat.year)
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise solution
 
@@ -192,7 +192,7 @@ Create a list of numbers, called `x1`. Reverse the order of the items in the lis
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercise 1 solution
 
 ```{python}
@@ -212,7 +212,7 @@ print(x1)
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercise 2 solution
 
 ```{python}
@@ -248,7 +248,7 @@ a[1] = 5
 ```
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercise 4
 
 What does the following tell you about copying and use of memory in lists in Python?
@@ -278,7 +278,7 @@ b
 :::
 
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 ## Exercises solutions
 
 ```{python}
@@ -306,7 +306,7 @@ Define a function called `sqrt` that will take the square root of a number and w
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 1 solution
 
@@ -329,7 +329,7 @@ def sqrt(x, complex=False):
 :::
 
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 2 solution
 
@@ -369,7 +369,7 @@ print(mynum)
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 1 solution
 
@@ -395,7 +395,7 @@ What happens when you multiply a tuple by a number?
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 2 solution
 
@@ -414,7 +414,7 @@ x * 3
 - What's nice about using immutable objects in your code?
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 3 solution
 
@@ -431,7 +431,7 @@ How can you add an item to a dictionary?
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 4 solution
 
@@ -451,7 +451,7 @@ How do you combine two dictionaries into a single dictionary?
 
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 5 solution
 ```{python}
@@ -472,7 +472,7 @@ print(z)
 - How are dictionaries different from such analogous structures in R?
 :::
 
-::: {.callout-info collapse="true"}
+::: {.callout-note collapse="true"}
 
 ## Exercise 6 solution
 

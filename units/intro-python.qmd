@@ -190,14 +190,14 @@ We'll work through the [Storing Multiple Values in Lists section](https://swcarp
 
 Create a list of numbers, called `x1`. Reverse the order of the items in the list
     using slicing. Now reverse the order of the items using a list
-    method. How does using the method differ from slicing? Hint: you can type `x.` followed by the `<Tab>` key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.
+    method. How does using the method differ from slicing? Hint: you can type `x1.` followed by the `<Tab>` key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.
 
 :::
 
 ::: {.callout-tip}
 ## Exercise 2
 
-- Figure out some different ways of combining your list of numbers with a list of strings to create a single list of mixed type elements. (Hint: you can type `x.` followed by the `<Tab>` key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.)
+- Figure out some different ways of combining your list of numbers with a list of strings to create a single list of mixed type elements. (Hint: you can type `x1.` followed by the `<Tab>` key in a Notebook or at the IPython prompt to find the various methods that can be applied to a list.)
 - Now try to sort the resulting list. What happens?
 
 :::
