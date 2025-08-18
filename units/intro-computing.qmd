@@ -571,7 +571,7 @@ We'll run a simple linear algebra operation in Python to illustrate how we can m
 ::: {.callout-warning}
 ## DataHub memory limits
 
-Be careful about increasing `n` in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don't increase `n` below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. If you're doing this as part of the workshop, we've increased those limits somewhat, so somewhat larger values of `n` should be fine.
+Be careful about increasing `n` in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don't increase `n` below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. It's possible that the memory available in your session might be larger, in which case larger values of `n` might be ok.
 
 :::
 
