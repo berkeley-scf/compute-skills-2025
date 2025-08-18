@@ -740,10 +740,10 @@ DataHub memory limits
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Be careful about increasing <code>n</code> in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don’t increase <code>n</code> below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. If you’re doing this as part of the workshop, we’ve increased those limits somewhat, so somewhat larger values of <code>n</code> should be fine.</p>
+<p>Be careful about increasing <code>n</code> in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don’t increase <code>n</code> below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. It’s possible that the memory available in your session might be larger, in which case larger values of <code>n</code> might be ok.</p>
 </div>
 </div>
-<div id="5dd3640d" class="cell" data-execution_count="1">
+<div id="d2c3dfb9" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -765,7 +765,7 @@ DataHub memory limits
 </div>
 <div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We might need to run it in a loop to be able to monitor the running process (since it finishes so quickly):</p>
-<div id="3c3ec95f" class="cell" data-execution_count="2">
+<div id="f62c770f" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ((i<span class="op">=</span><span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span> i<span class="op">++</span>))<span class="op">;</span> do</span>
@@ -1815,7 +1815,7 @@ DataHub memory limits
 <span id="cb39-571"><a href="#cb39-571" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
 <span id="cb39-572"><a href="#cb39-572" aria-hidden="true" tabindex="-1"></a><span class="fu">## DataHub memory limits</span></span>
 <span id="cb39-573"><a href="#cb39-573" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-574"><a href="#cb39-574" aria-hidden="true" tabindex="-1"></a>Be careful about increasing <span class="in">`n`</span> in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don't increase <span class="in">`n`</span> below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. If you're doing this as part of the workshop, we've increased those limits somewhat, so somewhat larger values of <span class="in">`n`</span> should be fine.</span>
+<span id="cb39-574"><a href="#cb39-574" aria-hidden="true" tabindex="-1"></a>Be careful about increasing <span class="in">`n`</span> in the example below when on DataHub. Basic DataHub virtual machines by default only have 1 GB memory, so don't increase <span class="in">`n`</span> below or you may run out of memory if running on DataHub and this can cause problems in your DataHub session. It's possible that the memory available in your session might be larger, in which case larger values of <span class="in">`n`</span> might be ok.</span>
 <span id="cb39-575"><a href="#cb39-575" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-576"><a href="#cb39-576" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb39-577"><a href="#cb39-577" aria-hidden="true" tabindex="-1"></a></span>
