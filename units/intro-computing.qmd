@@ -527,7 +527,7 @@ I used `rm` above to remove the file. Be very careful about removing files - the
 The `mv` command is also used if you want to rename a file. 
 ```bash
 $ cd ~/compute-skills-2020/units
-$ mv session3.qmd _sesson3.qmd
+$ mv intro-python.qmd _intro-python.qmd
 $ ls
 ```
 
