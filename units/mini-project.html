@@ -269,14 +269,14 @@ Getting the data using API calls
 <p>For background information only, I’ll note that <a href="../project/fetch_senator_tweets.py">this Python code</a> downloads tweets using the Python twitter package to interact with Twitter’s API. In 2017, you would only be able to run that code if you set up your own Twitter account and follow the instructions at the start of the file regarding filling in the authentication information (CONSUMER_KEY, CONSUMER_SECRET, etc.). Eight years later and with the transition from Twitter to X, I suspect the code would need to be modified.</p>
 </div>
 </div>
-<p>I’ve already run the code mentioned above and downloaded the data for you. The downloaded information on the senators’ twitter accounts is in <code>project/senators-list.json</code> in the workshop materials, while the downloaded tweets are in <code>timelines.json</code>. <code>timelines.json</code> is too big to put in the Github repository. You can find it at <a href="http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json" class="uri">http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json</a>. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request.</p>
+<p>I’ve already run the code mentioned above and downloaded the data for you. The downloaded information on the senators’ twitter accounts is in <code>project/senators-list.json</code> in the workshop materials, while the downloaded tweets are in <code>timelines.json</code>. <code>timelines.json</code> is too big to put in the Github repository. You can find it at <a href="http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json" class="uri">http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json</a>. One way to get the file to DataHub is to use <code>wget</code> in the terminal in DataHub. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request.</p>
 <p>If you’d like to explore the capabilities of AI-assisted coding to carry out an entire project, my suggestion is that you first do a good chunk of this yourself (potentially with some very focused AI-based queries). Then try using a tool like GitHub Copilot in <code>Agent</code> mode and see what results you get, comparing them to your hand-coded work.</p>
 </section>
 <section id="questions" class="level1">
 <h1>Questions</h1>
 <ol type="1">
 <li><p>Load the <code>senators-list.json</code> and <code>timelines.json</code> files into Python as objects called <code>senators</code> and <code>timelines</code>, using this syntax:</p>
-<div id="a17ee56d" class="cell" data-execution_count="1">
+<div id="5c060576" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"tmp.json"</span>) <span class="im">as</span> infile:</span>
@@ -289,7 +289,7 @@ Getting the data using API calls
 <li><p>Make a list of lists where the outer list represents senators and the inner list contains the text of each senator’s tweets, and call it <code>tweets</code>.</p></li>
 <li><p>Write a function, called <code>remove_punct</code>, that takes a word and returns the word with all punctuation characters removed, except for those that occur within a word. You’ll want to explore the <code>string</code> package for useful functionality.</p></li>
 <li><p>Write a function that takes tweet and returns a cleaned up version of the tweet. Here is an example function to get you started:</p>
-<div id="acaf8ee1" class="cell" data-execution_count="2">
+<div id="13562b3f" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean(tweet):</span>
@@ -309,7 +309,7 @@ Getting the data using API calls
 <li><p>Create a list, <code>tokens</code>, where all 200 of each senator’s tweets are made into a single string. Hint: this syntax might be useful: <code>" ".join(my_list_of_strings)</code>.</p></li>
 <li><p>Create a Pandas dataFrame with the following columns: senator name or handle, party of the senator, and number of times a prominent politician is mentioned in each senator’s tweets. You might count the number of ‘Obama’, ‘Trump’, or ‘Clinton’ references.</p>
 <p>You can use this to create the party column (1=Republican, 0=Democratic):</p>
-<div id="f756c31c" class="cell" data-execution_count="3">
+<div id="9faea8c8" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>party <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,</span>
@@ -320,7 +320,7 @@ Getting the data using API calls
 <p>That should correspond to the ordering in <code>timelines</code> but of course it would be more robust to create a dataFrame that has user names and party as columns and merge that with the count information.</p></li>
 <li><p>Use a Poisson GLM to assess the relationship between party and number of Obama/Trump/Clinton mentions. Does one party tend to mention Obama/Trump/Clinton more in their tweets? Can you deduce a pattern by considering the party of the senator and the party of Obama/Trump/Clinton?</p>
 <p>Here’s some syntax to help you get started:</p>
-<div id="cf3ba91a" class="cell" data-execution_count="4">
+<div id="acbdb0e2" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -818,7 +818,7 @@ Getting the data using API calls
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>For background information only, I'll note that <span class="co">[</span><span class="ot">this Python code</span><span class="co">](../project/fetch_senator_tweets.py)</span> downloads tweets using the Python twitter package to interact with Twitter's API. In 2017, you would only be able to run that code if you set up your own Twitter account and follow the instructions at the start of the file regarding filling in the authentication information (CONSUMER_KEY, CONSUMER_SECRET, etc.). Eight years later and with the transition from Twitter to X, I suspect the code would need to be modified.</span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>I've already run the code mentioned above and downloaded the data for you.  The downloaded information on the senators' twitter accounts is in <span class="in">`project/senators-list.json`</span> in the workshop materials, while the downloaded tweets are in <span class="in">`timelines.json`</span>.  <span class="in">`timelines.json`</span> is too big to put in the Github repository. You can find it at <span class="ot">&lt;http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json&gt;</span>. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request.</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>I've already run the code mentioned above and downloaded the data for you.  The downloaded information on the senators' twitter accounts is in <span class="in">`project/senators-list.json`</span> in the workshop materials, while the downloaded tweets are in <span class="in">`timelines.json`</span>.  <span class="in">`timelines.json`</span> is too big to put in the Github repository. You can find it at <span class="ot">&lt;http://www.stat.berkeley.edu/~paciorek/transfer/timelines.json&gt;</span>. One way to get the file to DataHub is to use <span class="in">`wget`</span> in the terminal in DataHub. Note that there are only 200 tweets for each senator because of limits on how many tweets can be accessed in a given request.</span>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>If you'd like to explore the capabilities of AI-assisted coding to carry out an entire project, my suggestion is that you first do a good chunk of this yourself (potentially with some very focused AI-based queries). Then try using a tool like GitHub Copilot in <span class="in">`Agent`</span> mode and see what results you get, comparing them to your hand-coded work.</span>
 <span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
