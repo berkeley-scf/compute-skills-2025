@@ -470,6 +470,11 @@ x[[1, 3, 4]]
 
 x[pos] = 0
 
+# Vectorized boolean arithmetic
+
+x = np.random.normal(size=10)
+x[(x > 1) | (x < -0.5)]
+
 np.cos(x)
 ```
 
