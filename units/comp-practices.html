@@ -444,7 +444,7 @@ Warning
 </div>
 </div>
 <p>Once you have your module, you can use it like this:</p>
-<div id="7b963330" class="cell" data-execution_count="1">
+<div id="35d9237a" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -626,7 +626,19 @@ Note
 <li>If you’re working on a project with GitHub issues, reference the issue at the bottom.</li>
 <li>Start each item in the message with a verb (present tense) and provide a complete sentence.</li>
 </ul>
-<p>::: {.callout-tip “Avoiding complicated commit messages”} If you find your commit message is covering multiple topics, it probably means you should have made multiple (“atomic”) commits. :::</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Avoiding complicated commit messages">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avoiding complicated commit messages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you find your commit message is covering multiple topics, it probably means you should have made multiple (“atomic”) commits.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="exercise-put-your-code-in-your-repository" class="level2">
@@ -678,7 +690,7 @@ More than the syntax
 <p>We identify each node (commit) with a hash, a fingerprint of the content of each commit and its parent. It is important the fact that the hash includes information of the parent node, since this allow us to keep the check the structural consistency of the DAG.</p>
 <p>We can illustrate what Git is doing easily in Python.</p>
 <p>Let’s create a first hash:</p>
-<div id="073c0b4e" class="cell" data-execution_count="2">
+<div id="2f77cf86" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> hashlib <span class="im">import</span> sha1</span>
@@ -694,7 +706,7 @@ More than the syntax
 </div>
 </div>
 <p>￼ Every small change we make on the previous text with result in a full change of the associated hash code. Notice also how in the next hash we have included the information of the parent node.</p>
-<div id="596588b5" class="cell" data-execution_count="3">
+<div id="04e4095e" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> <span class="st">b'Some more text in my paper...'</span></span>
@@ -846,7 +858,7 @@ Rolling back changes (optional)
 <h1>4. Code style and documentation</h1>
 <p>Having a (reasonably) consistent and clean style, plus documentation, is important for being able to read and maintain your code.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -855,7 +867,7 @@ Q: Who is the person most likely to use your code again?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A: You, but at some point in the future by which you will have forgotten what the code does and why.</p>
 <p>I can’t tell you how many times I’ve looked back at my own code and been amazed at how little I remember and frustrated with the former self who wrote it.</p>
@@ -893,7 +905,7 @@ Q: Who is the person most likely to use your code again?
 <li>Comments should generally be complete sentences.</li>
 </ul></li>
 <li><p>You can use parentheses to group operations such that they can be split up into lines and easily commented, e.g.,</p>
-<div id="03325126" class="cell" data-execution_count="4">
+<div id="8f7650db" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>newdf <span class="op">=</span> (</span>
@@ -957,7 +969,7 @@ Q: Who is the person most likely to use your code again?
 <section id="using-the-jupyterlab-visual-debugger" class="level3">
 <h3 class="anchored" data-anchor-id="using-the-jupyterlab-visual-debugger">Using the JupyterLab visual debugger</h3>
 <p>Let’s debug my buggy implementation of Newton’s method.</p>
-<div id="24272002" class="cell" data-execution_count="5">
+<div id="cbc46dc4" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> newton</span>
@@ -1836,7 +1848,7 @@ if x &gt; 3:
 <span id="cb30-247"><a href="#cb30-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you're working on a project with GitHub issues, reference the issue at the bottom.</span>
 <span id="cb30-248"><a href="#cb30-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Start each item in the message with a verb (present tense) and provide a complete sentence.</span>
 <span id="cb30-249"><a href="#cb30-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-250"><a href="#cb30-250" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip "Avoiding complicated commit messages"}</span>
+<span id="cb30-250"><a href="#cb30-250" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Avoiding complicated commit messages"}</span>
 <span id="cb30-251"><a href="#cb30-251" aria-hidden="true" tabindex="-1"></a>If you find your commit message is covering multiple topics, it probably means you should</span>
 <span id="cb30-252"><a href="#cb30-252" aria-hidden="true" tabindex="-1"></a>have made multiple ("atomic") commits.</span>
 <span id="cb30-253"><a href="#cb30-253" aria-hidden="true" tabindex="-1"></a>:::</span>
