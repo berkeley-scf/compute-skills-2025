@@ -177,7 +177,7 @@
     "href": "units/comp-practices.html#exercise-debugging-your-newton-code",
     "title": "Version control, programming, and testing",
     "section": "Exercise: debugging your Newton code",
-    "text": "Exercise: debugging your Newton code\nRun your Newton method on the following function, \\(x^4/4 - x^3 -x\\), for various starting values. Sometimes it should fail.\nUse the debugger to try to see what goes wrong. (For our purposes here, do this using the debugger; don’t figure it out from first principles mathematically or graphically.)\nConditional breakpoints are a useful tool that causes the debugger to stop at a breakpoint only if some condition is true (e.g., if some extreme value is reached in the Newton iterations). I don’t see that it’s possible to do this with the JupyterLab debugger, but with the ipdb debugger you can do things like this to debug a particular line of a particular file if a condition (here x==5) is met:\nb path/to/script.py:999, x==5",
+    "text": "Exercise: debugging your Newton code\nRun your Newton method on the following function, \\(x^4/4 - x^3 -x\\), for various starting values. Sometimes it should fail.\nUse the debugger to try to see what goes wrong. (For our purposes here, do this using the debugger; don’t figure it out from first principles mathematically or graphically.)\n\n\n\n\n\n\nConditional breakpoints\n\n\n\nConditional breakpoints are a useful tool that causes the debugger to stop at a breakpoint only if some condition is true (e.g., if some extreme value is reached in the Newton iterations). I don’t see that it’s possible to do this with the JupyterLab debugger, but with the ipdb debugger you can do things like this to debug a particular line of a particular file if a condition (here x==5) is met:\nb path/to/script.py:999, x==5",
     "crumbs": [
       "Modules",
       "Computational Tools and Practices"
@@ -188,7 +188,7 @@
     "href": "units/comp-practices.html#demo-unit-tests-and-pytest",
     "title": "Version control, programming, and testing",
     "section": "Demo: Unit tests and pytest",
-    "text": "Demo: Unit tests and pytest\npytest is a very popular package/framework for testing.\nWe create test functions that check for the expected result.\nWe use assert statements. These are ways of generally setting up sanity checks in your code. They are usually used in development, or perhaps data analysis workflows, rather than production code. They are a core part of setting up tests such as here with pytest.\npytest test_newton.py",
+    "text": "Demo: Unit tests and pytest\npytest is a very popular package/framework for testing.\nWe create test functions that check for the expected result.\nWe use assert statements. These are ways of generally setting up sanity checks in your code. They are usually used in development, or perhaps data analysis workflows, rather than production code. They are a core part of setting up tests such as here with pytest.\nLet’s look at a small example test file and then run the tests:\ncat test_newton.py\n\npytest test_newton.py",
     "crumbs": [
       "Modules",
       "Computational Tools and Practices"
@@ -210,7 +210,7 @@
     "href": "units/comp-practices.html#exercise-unit-tests",
     "title": "Version control, programming, and testing",
     "section": "Exercise: Unit tests",
-    "text": "Exercise: Unit tests\nImplement your test cases as unit tests using the pytest package.\nInclude tests for:\n\nsuccessful optimization\nunsuccessful optimization\ninvalid user inputs\n\nwith the expected output being what you want to happen, not necessarily what your function does.\nYou’ll want cases where you know the correct answer. Start simple.\n\n\n\n\n\n\nOnly write tests now\n\n\n\nFor now don’t modify your code even if you start to suspect how it might fail. Writing the tests and then modifying code so they pass is an example of test-driven development.",
+    "text": "Exercise: Unit tests\nImplement your test cases as unit tests using the pytest package.\nInclude tests for:\n\nsuccessful optimization\nunsuccessful optimization\ninvalid user inputs\n(if you have time) situations where Newton’s method is not converging to a local minimum\n\nwith the expected output being what you want to happen, not necessarily what your function does.\nYou’ll want cases where you know the correct answer. Start simple.\n\n\n\n\n\n\nOnly write tests now\n\n\n\nFor now don’t modify your code even if you start to suspect how it might fail. Writing the tests and then modifying code so they pass is an example of test-driven development.",
     "crumbs": [
       "Modules",
       "Computational Tools and Practices"
