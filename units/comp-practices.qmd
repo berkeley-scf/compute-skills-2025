@@ -673,11 +673,15 @@ Sometimes it should fail.
 
 Use the debugger to try to see what goes wrong. (For our purposes here, do this using the debugger; don't figure it out from first principles mathematically or graphically.)
 
+::: {.callout-tip title="Conditional breakpoints"}
+
 Conditional breakpoints are a useful tool that causes the debugger to stop at a breakpoint only if some condition is true (e.g., if some extreme value is reached in the Newton iterations). I don't see that it's possible to do this with the JupyterLab debugger, but with the `ipdb` debugger you can do things like this to debug a particular line of a particular file if a condition (here `x==5`) is met:
 
 ```
 b path/to/script.py:999, x==5
 ```
+
+:::
 
 # 6. Defensive programming, error checking and testing
 
@@ -689,7 +693,11 @@ We create test functions that check for the expected result.
 
 We use `assert` statements. These are ways of generally setting up sanity checks in your code. They are usually used in development, or perhaps data analysis workflows, rather than production code. They are a core part of setting up tests such as here with `pytest`.
 
+Let's look at a small example test file and then run the tests:
+
 ```bash
+cat test_newton.py
+
 pytest test_newton.py
 ```
 
@@ -710,6 +718,7 @@ Include tests for:
 - successful optimization
 - unsuccessful optimization
 - invalid user inputs
+- (if you have time) situations where Newton's method is not converging to a local minimum
 
 with the expected output being what you *want* to happen, not necessarily what your function does.
 
