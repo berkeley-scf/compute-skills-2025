@@ -44,7 +44,7 @@ Here are the steps:
 
 You can derive it by finding the root (aka zero) of the gradient function using a Taylor series approximation to the gradient.
 
-## Exercise: Implement univariate Newton's method
+## Exercise: Implement univariate Newton's method as a Python function
 
 
 Here's what you'll need your code to do:
@@ -64,7 +64,7 @@ Don't make your finite difference ("epsilon") too small or you'll actually get i
 :::
 
 ::: {.callout-note}
-For now, please do not use any Python packages that provide finite difference-based derivatives. (We'll do that later, and it's helpful to have more code available for the work we'll do today.)
+For now, please do not use any Python packages that provide finite difference-based derivatives. (We'll do that later, and it's helpful to have more of our own code available for the work we'll do today.)
 
 :::
 
@@ -75,7 +75,7 @@ You're welcome to develop your code in a Jupyter Notebook, in the DataHub editor
 Once you've written your Python functions, put your code into a simple text file, called `newton.py`. In doing so you've created a Python *module*.
 
 ::: {.callout-warning}
-Don't use a Jupyter notebook (.ipynb) file at this stage, as it won't work as a *module* and is not handled in git in the same nice manner as simple text files.
+Don't use a Jupyter notebook (.ipynb) file at this stage, as a notebook file won't work as a *module* and is not handled in git in the same nice manner as simple text files.
 :::
 
 
@@ -160,7 +160,7 @@ total 40
 <snip>
 ```
 
-Step 2. Add files
+#### Step 2. Add files
 
 Next move (or copy) your Python module into the repository directory. For the demo, I'll use a version of the Newton code that I wrote that has some bugs in it (for later debugging). The file is not in the repository.
 
@@ -180,7 +180,7 @@ If you're learning to use the shell, it's best to practice doing the copying in 
 
 Of if you have it on your laptop in a local file you edited there (instead of within DataHub), navigate to the directory of the new repository in the DataHub file manager window pane and click on the "Upload Files" button. 
 
-Step 3. Edit file(s)
+#### Step 3. Edit file(s)
 
 Edit the README file to indicate that the repository has a basic implementation
 of Newton's method.
@@ -245,8 +245,10 @@ Some tips:
 - If you're working on a project with GitHub issues, reference the issue at the bottom.
 - Start each item in the message with a verb (present tense) and provide a complete sentence.
 
+::: {.callout-tip "Avoiding complicated commit messages"}
 If you find your commit message is covering multiple topics, it probably means you should
 have made multiple ("atomic") commits.
+:::
 
 ## Exercise: Put your code in your repository
 
@@ -270,7 +272,7 @@ We'll start with some visuals and then go back to some Git terminology and to th
 
 ## Git visuals: Understanding Git concepts
 
-Fernando's Statistics 159/259 materials have a nice visualization ([online version](https://docs.google.com/presentation/d/1YlM3boYLE8DwbxGNO3ZVVt3e9gEoBgD1uc9RtItUYCU), [PDF version](git_visuals.pdf)) of a basic Git workflow that we'll walk through.
+Fernando Perez's Statistics 159/259 materials have a nice visualization ([online version](https://docs.google.com/presentation/d/1YlM3boYLE8DwbxGNO3ZVVt3e9gEoBgD1uc9RtItUYCU), [PDF version](git_visuals.pdf)) of a basic Git workflow that we'll walk through.
 
 Note that we haven't actually seen in practice some of what is shown in the visual: tags, branches, and merging, but we'll be using those ideas later.
 
@@ -464,11 +466,13 @@ Go to your partner's repository at `https://github.com/<user_name>/newton-practi
 
 #### Step 2: Respond to suggestions
 
-In response to your partner's comments, make some small change(s) to your `newton.py` code.
+In response to your partner's comments, make change(s) (possibly only small changes, but at least some change to give you practice) to your `newton.py` code.
 
 You can do this in DataHub (or locally on your laptop if that's what you're doing) and make a commit as we did in the previous exercise.
 
-Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message. You can also create new files via the `+` button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run `git pull` to pull down the changes to your local repository on DataHub.
+Or you can do the editing in your GitHub browser window by clicking on the file and choosing the pencil icon (far right) to edit it. When you save it, a commit will be made. Make sure to provide a commit message (noting the GitHub issue is a good idea). You can also create new files via the `+` button in the top of the left sidebar. If you make changes directly on GitHub, you'll also want to run `git pull` to pull down the changes to your local repository on DataHub.
+
+Finally, close the GitHub issue that your partner opened, leaving a brief note that you addressed the comments/suggestions.
 
 # 4. Code style and documentation
 
