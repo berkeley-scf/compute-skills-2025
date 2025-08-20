@@ -245,7 +245,7 @@ Some tips:
 - If you're working on a project with GitHub issues, reference the issue at the bottom.
 - Start each item in the message with a verb (present tense) and provide a complete sentence.
 
-::: {.callout-tip "Avoiding complicated commit messages"}
+::: {.callout-tip title="Avoiding complicated commit messages"}
 If you find your commit message is covering multiple topics, it probably means you should
 have made multiple ("atomic") commits.
 :::
