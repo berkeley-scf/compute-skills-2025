@@ -60,7 +60,9 @@ Here's what you'll need your code to do:
 
    
 ::: {.callout-warning}
-Don't make your finite difference ("epsilon") too small or you'll actually get inaccurate estimates. (We'll discuss why when we talk a bit about [numerical issues in computing](additional-topics.html#calculation-errors) later.)
+Don't make your finite difference ("epsilon") too small or you'll actually get inaccurate estimates. (We'll discuss why when we talk a bit about [numerical issues in computing](additional-topics.html#calculation-errors) later.) 
+
+Before trying to run the full Newton method, make sure your derivative calculations work using a couple examples.
 :::
 
 ::: {.callout-note}
@@ -564,10 +566,11 @@ diff newton-save.py newton.py
 ## Exercise: add documentation and comments to your Newton module
 
 1. Add a [doc string](https://peps.python.org/pep-0257) to each of your functions. Focus on your main function. Take a look at an example, such as `help(numpy.linalg.cholesky)` to see the different parts and the format. Docstrings are also a good thing to ask an AI coding tool to help with.
-2. Consider whether to add comments to your code.
-3. Apply `ruff` to your code.
-4. Compare the results with the style suggestions above and do additional reformatting as needed.
-5. Commit and push to GitHub. Remember to have a good commit message!
+2. Run `help(optimize)` to check that your documentation shows up.
+3. Consider whether to add comments to your code.
+4. Apply `ruff` to your code.
+5. Compare the results with the style suggestions above and do additional reformatting as needed.
+6. Commit and push to GitHub. Remember to have a good commit message!
 
 # 5. Debugging
 

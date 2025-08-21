@@ -16,7 +16,7 @@ execute:
 ::: {.callout-note}
 ## Overview
 
-This module presents some information on numerical analysis (random number generation and floating point precision), packaging, reproducibility, and automation.
+This module presents some information on multi-user Git, numerical analysis (random number generation and floating point precision), packaging, reproducibility, and automation.
 :::
 
 # 7. Multi-user Git
@@ -336,7 +336,8 @@ What's the derivative of $sin(x)$? Let's see what kind of accuracy we can get.
 def deriv(f, x, eps=1e-8):
    return (f(x+eps) - f(x)) / eps
 
-np.cos(0.2)
+truth = np.cos(0.2)
+print(truth)  # Well, "truth" on a computer.
 
 deriv(np.sin, 0.2)
 
@@ -413,7 +414,7 @@ Fork your partner's repository. In the local version of that repository on your 
 
 Here are the detailed steps of how to do all that:
 
-1. Go to your partner's GitHub page and fork the repository (`https://github.com/<username>/newton-practice/fork`). You can name it `newton-practice-<partner_name>` or something else. 
+1. Go to your partner's GitHub page and fork the repository (`https://github.com/<partner_username>/newton-practice/fork`). You can name it `newton-practice-<partner_name>` or something else. 
 2. On DataHub, clone the forked repository: `git clone https://github.com/<your_username>/newton-practice-<partner_name>`.
 3. On DataHub, enter the directory of the cloned repository: `cd newton-practice-<partner_name>`.
 4. Make a branch, make changes, add, and commit.
@@ -421,7 +422,7 @@ Here are the detailed steps of how to do all that:
 6. Push the commit to your GitHub: `git push -u origin newton-practice-<partner_name>`.
 7. Go to `https://github.com/<your_username>/newton-practice-<partner_name>` and open a pull request ("Compare and pull request") with the new branch. The request will automatically be done in the GitHub account of your partner.
 
-Then review the pull request your partner makes in your own repository. Iterate with your partner until you are happy to merge the pull request into your repository. Remember to then run `git pull` to get the changes in the local copy of the repository.
+Then review the pull request your partner made to YOUR repository. Iterate with your partner until you are happy to merge the pull request into your repository. Remember to then run `git pull` to get the changes in the local copy of the repository.
 
 
 # 9. Packaging and Conda environments
@@ -513,7 +514,7 @@ The `postBuild` file is  a completely optional file only needed if you want to u
 
 At the [numpy GitHub repository](https://github.com/numpy/numpy), by looking in  `pyproject.toml`, you can see that `numpy` is build and installed using a system called *Meson*, while at the [Jupyter GitHub repository](https://github.com/jupyter/jupyter) you can see that the `jupyter` package is built and installed using `setuptools`.
 
-*Building* a package usually refers to compiling source code but for a Python package that just has Python code, nothing needs to be compiled. *Installing* a package means putting the built package into a location on your computer where packages are installed.
+*Building* a package usually refers to compiling source code (but for a Python package that just has Python code, nothing needs to be compiled). *Installing* a package means putting the built package into a location on your computer where packages are installed.
 
 
 It would take more work to make the package available in a repository such as PyPI or via Conda.
@@ -529,7 +530,7 @@ See if you can install your package, run the tests, and use the package, followi
 
 If a package is on PyPI or available through Conda but not on your system, you can install it
 easily (usually). You don't need root permission on a machine to install
-a package, though you may need to use `pip install --user` or set up a new Conda environment.
+a package, though you may need to use `pip install --user` (which installs into `~/.local`) or set up a new Conda environment.
 
 Packages often depend on other packages. In general, if one package depends on another,
 pip or conda will generally install the dependency automatically.
