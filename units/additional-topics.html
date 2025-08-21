@@ -348,7 +348,7 @@ Overview
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This module presents some information on numerical analysis (random number generation and floating point precision), packaging, reproducibility, and automation.</p>
+<p>This module presents some information on multi-user Git, numerical analysis (random number generation and floating point precision), packaging, reproducibility, and automation.</p>
 </div>
 </div>
 <section id="multi-user-git" class="level1">
@@ -538,7 +538,7 @@ The full cycle of “git virtue”
 <h3 class="anchored" data-anchor-id="random-number-seed">Random number seed</h3>
 <p>The <em>seed</em> determines where in the cycle of the periodic sequence you are.</p>
 <p>It’s critical for ensuring reproducibility when running code that uses random numbers</p>
-<div id="248312a5" class="cell" data-execution_count="1">
+<div id="10c8cfa1" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -549,7 +549,7 @@ The full cycle of “git virtue”
 <pre><code>array([ 1.62434536, -0.61175641, -0.52817175, -1.07296862,  0.86540763])</code></pre>
 </div>
 </div>
-<div id="219059a1" class="cell" data-execution_count="2">
+<div id="58a7fb71" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np.random.normal(size <span class="op">=</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -558,7 +558,7 @@ The full cycle of “git virtue”
 <pre><code>array([-2.3015387 ,  1.74481176, -0.7612069 ,  0.3190391 , -0.24937038])</code></pre>
 </div>
 </div>
-<div id="b2d886d7" class="cell" data-execution_count="3">
+<div id="5b2b8633" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1</span>)</span>
@@ -574,7 +574,7 @@ The full cycle of “git virtue”
 <h3 class="anchored" data-anchor-id="random-number-generators">Random number generators</h3>
 <p>If you don’t do anything, numpy will use a generator called the Mersenne Twister (that’s the default in R too).</p>
 <p>However the “default” RNG in numpy is a newer, better algorithm called PCG64.</p>
-<div id="2bc2f1bd" class="cell" data-execution_count="4">
+<div id="76188be5" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Mersenne twister</span></span>
@@ -585,7 +585,7 @@ The full cycle of “git virtue”
 <pre><code>array([ 1.62434536, -0.61175641, -0.52817175, -1.07296862,  0.86540763])</code></pre>
 </div>
 </div>
-<div id="3d5e7033" class="cell" data-execution_count="5">
+<div id="24c0af54" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Mersenne twister, selected specifically</span></span>
@@ -597,7 +597,7 @@ The full cycle of “git virtue”
 <pre><code>array([ 2.04676909, -1.03653009,  0.72997546,  0.41584996, -0.1922969 ])</code></pre>
 </div>
 </div>
-<div id="5b05645d" class="cell" data-execution_count="6">
+<div id="0203da19" class="cell" data-execution_count="6">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">## 'Default' PCG64</span></span>
@@ -608,7 +608,7 @@ The full cycle of “git virtue”
 <pre><code>array([ 0.34558419,  0.82161814,  0.33043708, -1.30315723,  0.90535587])</code></pre>
 </div>
 </div>
-<div id="4b13b850" class="cell" data-execution_count="7">
+<div id="f88a3a80" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> np.random.default_rng(seed <span class="op">=</span> <span class="dv">1</span>)</span>
@@ -628,7 +628,7 @@ The full cycle of “git virtue”
 </section>
 <section id="floating-point-precision" class="level2">
 <h2 class="anchored" data-anchor-id="floating-point-precision">Floating point precision</h2>
-<div id="a66fbe00" class="cell" data-execution_count="8">
+<div id="a54ae291" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.3</span> <span class="op">-</span> <span class="fl">0.2</span> <span class="op">==</span> <span class="fl">0.1</span></span>
@@ -648,7 +648,7 @@ The full cycle of “git virtue”
 <li>4 bytes = 32 bits = single precision</li>
 </ul>
 <p>(GPU libraries often use 4 bytes or even fewer, or a mix of precisions.)</p>
-<div id="f847f6db" class="cell" data-execution_count="9">
+<div id="7f25a187" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dg(x, form <span class="op">=</span> <span class="st">'.20f'</span>):</span>
@@ -670,7 +670,7 @@ The full cycle of “git virtue”
 </div>
 <p>How many digits of accuracy do we have?</p>
 <p>Same thing regardless of the size of the number:</p>
-<div id="65f29dfc" class="cell" data-execution_count="10">
+<div id="2fdd3c93" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fl">12345678.1234567812345678</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -679,7 +679,7 @@ The full cycle of “git virtue”
 <pre><code>12345678.123456782</code></pre>
 </div>
 </div>
-<div id="8b5ca125" class="cell" data-execution_count="11">
+<div id="8275d210" class="cell" data-execution_count="11">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fl">12345678123456781234.5678</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -688,7 +688,7 @@ The full cycle of “git virtue”
 <pre><code>1.234567812345678e+19</code></pre>
 </div>
 </div>
-<div id="f054fbff" class="cell" data-execution_count="12">
+<div id="4e7c58cd" class="cell" data-execution_count="12">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>dg(<span class="fl">12345678123456781234.5678</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -702,7 +702,7 @@ The full cycle of “git virtue”
 <section id="comparisons" class="level3">
 <h3 class="anchored" data-anchor-id="comparisons">Comparisons</h3>
 <p>Let’s see what kinds of numbers we can safely compare for exact equality with <code>==</code>.</p>
-<div id="bd263233" class="cell" data-execution_count="13">
+<div id="84794813" class="cell" data-execution_count="13">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="fl">.5</span> <span class="op">-</span> <span class="fl">.2</span></span>
@@ -724,7 +724,7 @@ The full cycle of “git virtue”
 <section id="calculation-errors" class="level3">
 <h3 class="anchored" data-anchor-id="calculation-errors">Calculation errors</h3>
 <p>Let’s consider accuracy of subtraction.</p>
-<div id="af317b60" class="cell" data-execution_count="14">
+<div id="39130859" class="cell" data-execution_count="14">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1.1234</span> <span class="op">-</span> <span class="fl">1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -733,7 +733,7 @@ The full cycle of “git virtue”
 <pre><code>0.12339999999999995</code></pre>
 </div>
 </div>
-<div id="be65d537" class="cell" data-execution_count="15">
+<div id="6aac7381" class="cell" data-execution_count="15">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fl">123456781234.1234</span> <span class="op">-</span> <span class="fl">123456781234.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -744,7 +744,7 @@ The full cycle of “git virtue”
 </div>
 <p>This is called catastrophic cancellation.</p>
 <p>Do you think calling it “catastrophic” is too extreme? If so, consider this.</p>
-<div id="52076ab9" class="cell" data-execution_count="16">
+<div id="967303ba" class="cell" data-execution_count="16">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fl">81.0</span> <span class="op">-</span> <span class="fl">80.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -753,7 +753,7 @@ The full cycle of “git virtue”
 <pre><code>1.0</code></pre>
 </div>
 </div>
-<div id="a03f7380" class="cell" data-execution_count="17">
+<div id="b205d9a7" class="cell" data-execution_count="17">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fl">12345678123456781.0</span> <span class="op">-</span><span class="fl">12345678123456780.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -763,7 +763,7 @@ The full cycle of “git virtue”
 </div>
 </div>
 <p>What’s the derivative of <span class="math inline">\(sin(x)\)</span>? Let’s see what kind of accuracy we can get.</p>
-<div id="a34a4b27" class="cell" data-execution_count="18">
+<div id="70ddebd3" class="cell" data-execution_count="18">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> deriv(f, x, eps<span class="op">=</span><span class="fl">1e-8</span>):</span>
@@ -785,7 +785,7 @@ The full cycle of “git virtue”
 <h3 class="anchored" data-anchor-id="linear-algebra-errors">Linear algebra errors</h3>
 <p>The errors seen in doing calculations, such as catastrophic cancellation, cascaded through derivative estimation. That also happens when doing linear algebra operations.</p>
 <p>Here’s an example where mathematically all the eigenvalues are real-valued and positive, but not on the computer.</p>
-<div id="06e6479e" class="cell" data-execution_count="19">
+<div id="67e64858" class="cell" data-execution_count="19">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy <span class="im">as</span> sp</span>
@@ -814,7 +814,7 @@ The full cycle of “git virtue”
 <section id="overflow-and-underflow" class="level3">
 <h3 class="anchored" data-anchor-id="overflow-and-underflow">Overflow and underflow</h3>
 <p>Having a finite number of bits to represent each number means there are minimum and maximum numbers that can be expressed.</p>
-<div id="12b4c2af" class="cell" data-execution_count="20">
+<div id="c8eb61d2" class="cell" data-execution_count="20">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1.38e5000</span></span>
@@ -844,7 +844,7 @@ How much do we need to worry about overflow and underflow?
 </ul>
 </div>
 </div>
-<div id="e904c9de" class="cell" data-execution_count="21">
+<div id="0e593028" class="cell" data-execution_count="21">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -922,7 +922,7 @@ Work with probabilities and densities on the log scale. Almost always.
 <span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note that if there were other modules (i.e., Python code files), we could have imported from those as well.</p>
 <p>Now we can use the objects from the package without having to know that it was in a particular module (because of how <code>__init__.py</code> was set up).</p>
-<div id="7c880b27" class="cell" data-execution_count="22">
+<div id="6edc3a55" class="cell" data-execution_count="22">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mypkg</span>
@@ -941,7 +941,7 @@ Work with probabilities and densities on the log scale. Almost always.
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--user</span> .</span>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span>
 <span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> .local/lib/python3.11/site-packages</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="7a09f224" class="cell" data-execution_count="23">
+<div id="2fc23f3e" class="cell" data-execution_count="23">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mytoy</span>
@@ -960,7 +960,7 @@ Work with probabilities and densities on the log scale. Almost always.
 </ul>
 <p>The <code>postBuild</code> file is a completely optional file only needed if you want to use the package with a MyBinder environment.</p>
 <p>At the <a href="https://github.com/numpy/numpy">numpy GitHub repository</a>, by looking in <code>pyproject.toml</code>, you can see that <code>numpy</code> is build and installed using a system called <em>Meson</em>, while at the <a href="https://github.com/jupyter/jupyter">Jupyter GitHub repository</a> you can see that the <code>jupyter</code> package is built and installed using <code>setuptools</code>.</p>
-<p><em>Building</em> a package usually refers to compiling source code but for a Python package that just has Python code, nothing needs to be compiled. <em>Installing</em> a package means putting the built package into a location on your computer where packages are installed.</p>
+<p><em>Building</em> a package usually refers to compiling source code (but for a Python package that just has Python code, nothing needs to be compiled). <em>Installing</em> a package means putting the built package into a location on your computer where packages are installed.</p>
 <p>It would take more work to make the package available in a repository such as PyPI or via Conda.</p>
 </section>
 </section>
@@ -971,7 +971,7 @@ Work with probabilities and densities on the log scale. Almost always.
 </section>
 <section id="installing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
-<p>If a package is on PyPI or available through Conda but not on your system, you can install it easily (usually). You don’t need root permission on a machine to install a package, though you may need to use <code>pip install --user</code> or set up a new Conda environment.</p>
+<p>If a package is on PyPI or available through Conda but not on your system, you can install it easily (usually). You don’t need root permission on a machine to install a package, though you may need to use <code>pip install --user</code> (which installs into <code>~/.local</code>) or set up a new Conda environment.</p>
 <p>Packages often depend on other packages. In general, if one package depends on another, pip or conda will generally install the dependency automatically.</p>
 <p>One advantage of Conda is that it can also install non-Python packages on which a Python package depends, whereas with pip you sometimes need to install a system package to satisfy a dependency.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1039,7 +1039,7 @@ Activating an environment
 </ul></li>
 </ul>
 <p>Let’s check that <code>numpy</code> got installed into the <code>my_iso_env</code> environment where we expect it to be.</p>
-<div id="4dc33ae7" class="cell" data-execution_count="24">
+<div id="a3819311" class="cell" data-execution_count="24">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
@@ -1623,7 +1623,7 @@ jobs:
 <span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
 <span id="cb53-18"><a href="#cb53-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-19"><a href="#cb53-19" aria-hidden="true" tabindex="-1"></a>This module presents some information on numerical analysis (random number generation and floating point precision), packaging, reproducibility, and automation.</span>
+<span id="cb53-19"><a href="#cb53-19" aria-hidden="true" tabindex="-1"></a>This module presents some information on multi-user Git, numerical analysis (random number generation and floating point precision), packaging, reproducibility, and automation.</span>
 <span id="cb53-20"><a href="#cb53-20" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb53-21"><a href="#cb53-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-22"><a href="#cb53-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># 7. Multi-user Git</span></span>
@@ -2120,7 +2120,7 @@ jobs:
 <span id="cb53-559"><a href="#cb53-559" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-560"><a href="#cb53-560" aria-hidden="true" tabindex="-1"></a>At the <span class="co">[</span><span class="ot">numpy GitHub repository</span><span class="co">](https://github.com/numpy/numpy)</span>, by looking in  <span class="in">`pyproject.toml`</span>, you can see that <span class="in">`numpy`</span> is build and installed using a system called *Meson*, while at the <span class="co">[</span><span class="ot">Jupyter GitHub repository</span><span class="co">](https://github.com/jupyter/jupyter)</span> you can see that the <span class="in">`jupyter`</span> package is built and installed using <span class="in">`setuptools`</span>.</span>
 <span id="cb53-561"><a href="#cb53-561" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-562"><a href="#cb53-562" aria-hidden="true" tabindex="-1"></a>*Building* a package usually refers to compiling source code but for a Python package that just has Python code, nothing needs to be compiled. *Installing* a package means putting the built package into a location on your computer where packages are installed.</span>
+<span id="cb53-562"><a href="#cb53-562" aria-hidden="true" tabindex="-1"></a>*Building* a package usually refers to compiling source code (but for a Python package that just has Python code, nothing needs to be compiled). *Installing* a package means putting the built package into a location on your computer where packages are installed.</span>
 <span id="cb53-563"><a href="#cb53-563" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-564"><a href="#cb53-564" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-565"><a href="#cb53-565" aria-hidden="true" tabindex="-1"></a>It would take more work to make the package available in a repository such as PyPI or via Conda.</span>
@@ -2136,7 +2136,7 @@ jobs:
 <span id="cb53-575"><a href="#cb53-575" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-576"><a href="#cb53-576" aria-hidden="true" tabindex="-1"></a>If a package is on PyPI or available through Conda but not on your system, you can install it</span>
 <span id="cb53-577"><a href="#cb53-577" aria-hidden="true" tabindex="-1"></a>easily (usually). You don't need root permission on a machine to install</span>
-<span id="cb53-578"><a href="#cb53-578" aria-hidden="true" tabindex="-1"></a>a package, though you may need to use <span class="in">`pip install --user`</span> or set up a new Conda environment.</span>
+<span id="cb53-578"><a href="#cb53-578" aria-hidden="true" tabindex="-1"></a>a package, though you may need to use <span class="in">`pip install --user`</span> (which installs into <span class="in">`~/.local`</span>) or set up a new Conda environment.</span>
 <span id="cb53-579"><a href="#cb53-579" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-580"><a href="#cb53-580" aria-hidden="true" tabindex="-1"></a>Packages often depend on other packages. In general, if one package depends on another,</span>
 <span id="cb53-581"><a href="#cb53-581" aria-hidden="true" tabindex="-1"></a>pip or conda will generally install the dependency automatically.</span>
